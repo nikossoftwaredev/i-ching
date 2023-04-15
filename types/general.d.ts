@@ -1,3 +1,5 @@
+import { Locale } from 'i18n-config';
+
 export interface WikiArticle {
   title: string;
   path: string;
@@ -8,8 +10,8 @@ export interface WikiArticle {
 }
 
 export type PageProps = {
-  params?: any;
-  children?: React.ReactNode;
+  children: never;
+  params: { lang: Locale; article: string };
 };
 export interface HeaderConfig {
   field: string;

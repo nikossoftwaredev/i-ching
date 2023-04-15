@@ -3,21 +3,16 @@ import Header from 'ui/Header';
 
 import './global.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import { Locale, i18n } from 'i18n-config';
+import { i18n } from 'i18n-config';
 import { getDictionary } from 'utils/get-dictionary';
 import AppointmentForm from 'ui/AppointmentForm';
+import { PageProps } from 'types/general';
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }));
 }
 
-const RootLayout = async ({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: { lang: Locale };
-}): Promise<JSX.Element> => {
+const RootLayout = async ({ children, params }: PageProps): Promise<JSX.Element> => {
   const dictionary = await getDictionary(params.lang);
 
   return (
