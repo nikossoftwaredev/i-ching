@@ -42,7 +42,15 @@ a {
 }
 
 @media only screen and (max-width: 1290px) {
+  /* skata sta moutra sou? */
   .skata {
     height: 90vh;
+  }
+}
+
+@media screen and (max-width: 1124px) {
+  .grid-cols-4 {
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
