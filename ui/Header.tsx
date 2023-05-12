@@ -63,7 +63,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
             <Image src={logo} alt='Flowbite Logo' />
           </Link>
 
-          <ul className='flex lg:flex-row space-x-8'>
+          <ul className='flex flex-wrap lg:flex-row space-x-8'>
             {linksConfig.map(linkConfig => {
               let isActive = pathname === linkConfig.path;
 
