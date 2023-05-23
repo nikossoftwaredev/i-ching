@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Card from 'ui/Card';
 import Link from 'next/link';
 
