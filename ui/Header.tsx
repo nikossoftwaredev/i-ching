@@ -57,7 +57,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
             {ADDRESS}
           </Link>
         </div>
-        <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
+        <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl mr-1'>
           <Link href='/' className='flex items-center'>
             <img src='/images/logo_small.png' alt='Flowbite Logo' />
           </Link>
