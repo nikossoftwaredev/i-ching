@@ -1,7 +1,6 @@
 import { ADDRESS, BUSINESS_NAME, MAIL, MAP_IFRAME, PHONE } from 'data/general';
 import { cloneElement } from 'react';
 import { MdMailOutline, MdOutlinePhone, MdLocationPin } from 'react-icons/md';
-import outView from 'public/images/out-view.jpg';
 import Image from 'next/image';
 import SectionTitle from 'ui/SectionTitle';
 import Link from 'next/link';
@@ -43,7 +42,7 @@ const ContactPage = () => {
         <SectionTitle title='ΕΠΙΚΟΙΝΩΝΙΑ' className='mt-10' />
         <div className='grid sm:grid-cols-1 md:grid-cols-2 w-full gap-14 items-center justify-center'>
           <span className='flex items-center justify-center'>
-            <Image alt='out-view' src={outView} className='object-cover  rounded-lg' />
+            <Image alt='out-view' src='/images/out-view.jpg' className=' object-cover rounded-lg' />
           </span>
           <div className='flex items-start justify-start gap-4 flex-col'>
             <h1 className='font-extrabold text-2xl'>{BUSINESS_NAME}</h1>
