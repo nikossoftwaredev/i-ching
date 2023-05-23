@@ -1,39 +1,7 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "eslint-plugin-import",
-    "eslint-plugin-jsx-a11y",
-    "eslint-plugin-prettier",
-    "eslint-plugin-react",
-    "eslint-plugin-react-hooks",
-    "eslint-plugin-no-relative-import-paths",
-    "@typescript-eslint"
-  ],
-  "parser": "@typescript-eslint/parser",
-
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
+  "extends": ["next/core-web-vitals", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["eslint-plugin-no-relative-import-paths", "eslint-plugin-prettier"],
   "rules": {
-    "react/require-default-props": "off", // Since we do not use prop-types,
-    "react/react-in-jsx-scope": "off",
-    "no-console": "error",
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
-    ],
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
       {

@@ -59,7 +59,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
         </div>
         <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
           <Link href='/' className='flex items-center'>
-            <Image src='/images/logo_small.png' alt='Flowbite Logo' />
+            <img src='/images/logo_small.png' alt='Flowbite Logo' />
           </Link>
 
           <ul className='flex flex-wrap lg:flex-row space-x-8'>

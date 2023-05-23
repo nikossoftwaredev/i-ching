@@ -8,7 +8,7 @@ const Doctor = (): JSX.Element => {
       <Card className='xl:w-2/4 md:w-3/4 items-center justify-center p-5'>
         <section className='grid grid-cols-1 gap-10 justify-center items-center md:grid-cols-3'>
           <div className='h-full max-h-full relative col-span-1'>
-            <Image src='/images/doctor.jpg' alt='main-area' className='rounded-xl w-full' />
+            <img src='/images/doctor.jpg' alt='main-area' className='rounded-xl w-full' />
           </div>
           <div className='flex flex-col col-span-2'>
             <span>

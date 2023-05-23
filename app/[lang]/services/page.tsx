@@ -16,7 +16,11 @@ const ServicesPage = () => {
             className='flex flex-col max-w-[300px] overflow-x-hidden w-full hover:scale-105 transition ease-in-out duration-300 relative h-full'
           >
             <figure className='w-full h-[200px] m-h-[200px] relative z-0 brightness-75 transition ease-in-out duration-300 object-cover '>
-              <Image src={service.image} alt={service.title} fill />
+              <img
+                style={{ width: '100%', height: '100%' }}
+                src={service.image}
+                alt={service.title}
+              />
             </figure>
             <main className='p-5 w-full z-10 flex flex-col flex-auto'>
               <h1 className='font-extrabold text-2xl mb-4'>{service.title}</h1>

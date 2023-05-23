@@ -17,14 +17,13 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "Βιοσυντονισμός",
-    "επαναρρυθμίζει",
-    "Μεσοθεραπείας",
-    "Μυοσκελετικές",
-    "Οζονοθεραπεία",
-    "προλοθεραπεία",
-    "τενοντίτιδων",
-    "Φυσίατρο"
-  ]
+  "tailwindCSS.emmetCompletions": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
