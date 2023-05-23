@@ -9,7 +9,7 @@ const ServicesPage = () => {
   return (
     <main className='flex items-center justify-center flex-col'>
       <SectionTitle title='ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ' />
-      <div className='w-4/5 grid grid-cols-4 gap-10'>
+      <div className='w-4/5 items-center justify-items-center grid 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-10'>
         {servicesInfo.map(service => (
           <Card
             key={service.title}
@@ -17,7 +17,7 @@ const ServicesPage = () => {
           >
             <figure className='w-full h-[200px] m-h-[200px] relative z-0 brightness-75 transition ease-in-out duration-300 object-cover '>
               <img
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 src={service.image}
                 alt={service.title}
               />
