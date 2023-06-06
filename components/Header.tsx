@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ADDRESS, MAIL, PHONE, ΙΝSTAGRAM } from 'data/general';
 import { usePathname } from 'next/navigation';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import Button from 'components/Button';
 import MobileHeader from 'components/MobileHeader';
 import { Locale } from 'i18n-config';
@@ -20,7 +20,8 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
       { path: `/${lang}/services`, text: dictionary.header.services },
       { path: `/${lang}/about`, text: dictionary.header.about },
       { path: `/${lang}/wiki`, text: dictionary.header.wiki },
-      { path: `/${lang}/contact`, text: dictionary.header.contact }
+      { path: `/${lang}/contact`, text: dictionary.header.contact },
+      { path: `/${lang}/themes`, text: dictionary.header.themes }
     ],
     [dictionary, lang]
   );
@@ -34,6 +35,12 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
       appointmentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
       appointmentDiv.focus();
     }
+  }, []);
+
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+
+    if (theme) document.documentElement.setAttribute('data-theme', theme);
   }, []);
 
   return isMobile ? (
