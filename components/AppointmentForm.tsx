@@ -123,7 +123,7 @@ const AppointmentForm = () => {
               );
             })}
 
-            <Button className='mt-5' onClick={onSendEmail} loading={loading}>
+            <Button className='mt-5 animate-pulse-scale' onClick={onSendEmail} loading={loading}>
               Κλεισε Ραντεβου
             </Button>
           </div>

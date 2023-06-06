@@ -73,7 +73,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
           </Link>
         </div>
         <ul className='w-full flex flex-col sm:flex-row gap-6 justify-center items-center mr-1'>
-          <Link href='/' className='flex items-center'>
+          <Link href='/' className='flex items-center animate-pulse-scale'>
             <img src='/images/logo.png' alt='Flowbite Logo' width='100px' />
           </Link>
           {linksConfig.map(linkConfig => {
@@ -94,7 +94,9 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
               </li>
             );
           })}
-          <Button onClick={scrollToAppointment}>Κλεισε Ραντεβου</Button>
+          <Button onClick={scrollToAppointment} className='animate-pulse-scale'>
+            Κλεισε Ραντεβου
+          </Button>
         </ul>
       </nav>
     </header>
