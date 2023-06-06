@@ -10,9 +10,9 @@ const SectionTitle = ({
   return (
     <div className={`w-full flex items-center justify-${position} my-6 ${className}`}>
       <div className={`sm:w-full md:w-2/4 flex items-center justify-${position}`}>
-        <div className='h-0 border-t-2 flex-grow border-bg-primary-content' />
-        <h1 className='font-black text-3xl text-bg-primary-content text-center mx-3'>{title}</h1>
-        <div className='h-0 border-t-2 flex-grow border-bg-primary-content' />
+        <div className='h-0 border-t-2 flex-grow border-primary-content' />
+        <h1 className='font-black text-3xl text-primary-content text-center mx-3'>{title}</h1>
+        <div className='h-0 border-t-2 flex-grow border-primary-content' />
       </div>
     </div>
   );

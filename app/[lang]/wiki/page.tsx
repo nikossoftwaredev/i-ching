@@ -27,7 +27,7 @@ const WikiPage = () => {
 
   return (
     <main className='flex items-center justify-center flex-col'>
-      <div className='relative text-gray-600 focus-within:text-gray-400 mt-4'>
+      <div className='relative focus-within:text-gray-400 mt-4'>
         <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
           <MdSearch />
         </span>
@@ -36,7 +36,7 @@ const WikiPage = () => {
           name='q'
           value={searchValue}
           onChange={onChange}
-          className='py-2 text-sm rounded-md pl-10 focus:outline-none bg-white text-gray-900'
+          className='pl-10 input input-bordered'
           placeholder='Αναζήτηση...'
         />
       </div>
