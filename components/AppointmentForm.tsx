@@ -87,7 +87,7 @@ const AppointmentForm = () => {
     });
 
     setLoading(false);
-  }, [formData.email, formData.info, formData.name]);
+  }, [formData]);
 
   return (
     <main className='flex items-center justify-center flex-col'>

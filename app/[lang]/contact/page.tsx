@@ -1,4 +1,4 @@
-import { ADDRESS, BUSINESS_NAME, MAIL, MAP_IFRAME, PHONE } from 'data/general';
+import { ADDRESS, BUSINESS_NAME, MAIL, MAP_IFRAME, NAVIGATION, PHONE } from 'data/general';
 import { cloneElement } from 'react';
 import { MdMailOutline, MdOutlinePhone, MdLocationPin } from 'react-icons/md';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 const contactInfo = [
   {
     icon: (
-      <Link href='https://goo.gl/maps/uiR9Q3m2Ag4M9mKAA' target='_blank'>
+      <Link href={NAVIGATION} target='_blank'>
         <MdLocationPin className='text-bg-primary-content hover:text-black' size={70} />
       </Link>
     ),

@@ -4,7 +4,7 @@ import { MdMail, MdPhone, MdLocationPin } from 'react-icons/md';
 import { BsInstagram } from 'react-icons/bs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ADDRESS, MAIL, PHONE, ΙΝSTAGRAM } from 'data/general';
+import { ADDRESS, MAIL, NAVIGATION, PHONE, ΙΝSTAGRAM } from 'data/general';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo } from 'react';
 import Button from 'components/Button';
@@ -67,7 +67,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
             <MdMail size={30} />
             <span className='hidden sm:inline-block'>{MAIL}</span>
           </Link>
-          <Link className='text-md flex gap-2 items-center' href='/contact'>
+          <Link className='text-md flex gap-2 items-center' href={NAVIGATION}>
             <MdLocationPin size={30} />
             <span className='hidden sm:inline-block'> {ADDRESS}</span>
           </Link>
