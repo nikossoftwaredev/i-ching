@@ -94,9 +94,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
               </li>
             );
           })}
-          <Button onClick={scrollToAppointment} outlined>
-            Κλεισε Ραντεβου
-          </Button>
+          <Button onClick={scrollToAppointment}>Κλεισε Ραντεβου</Button>
         </ul>
       </nav>
     </header>
