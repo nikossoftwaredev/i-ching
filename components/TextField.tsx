@@ -6,12 +6,7 @@ type TextFieldProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, H
 const TextField = (props: TextFieldProps) => {
   const { className } = props;
 
-  return (
-    <input
-      {...props}
-      className={`bg-white  border-2 rounded-lg m-h-14 px-2 py-5 focus:border-bgPrimary focus:outline-none ${className}`}
-    />
-  );
+  return <input {...props} className={`input input-bordered w-full ${className}`} />;
 };
 
 export default TextField;

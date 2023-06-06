@@ -13,9 +13,9 @@ const Timeline = ({ timeInfo }: TimelineProps) => {
     <ul className='relative sm:w-full xl:w-3/4'>
       {timeInfo.map(({ date, title }, idx) => (
         <li key={idx} className='grid grid-flow-row grid-cols-7 items-center justify-start gap-10'>
-          <div className='relative h-full  col-span-2 flex items-center justify-end border-r-4 border-bgPrimary pr-5'>
+          <div className='relative h-full  col-span-2 flex items-center justify-end border-r-4 border-bg-primary-content pr-5'>
             <h1 className='hidden lg:block break-words mr-2 font-semibold'>{date}</h1>
-            <span className=' absolute w-8 h-8 border-bgPrimary rounded-full bg-bgPrimary  -right-[17px] flex items-center justify-center  text-white text-sm'>
+            <span className=' absolute w-8 h-8 border-bg-primary-content rounded-full bg-bg-primary-content  -right-[17px] flex items-center justify-center  text-white text-sm'>
               {idx + 1}
             </span>
             {idx === 0 && (

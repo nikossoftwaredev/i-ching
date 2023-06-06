@@ -9,12 +9,7 @@ type TextFieldProps = DetailedHTMLProps<
 const TextArea = (props: TextFieldProps) => {
   const { className } = props;
 
-  return (
-    <textarea
-      {...props}
-      className={`bg-white border-2 rounded-lg px-2 py-5 focus:border-bgPrimary focus:outline-none ${className}`}
-    />
-  );
+  return <textarea {...props} className={`textarea textarea-bordered ${className}`} />;
 };
 
 export default TextArea;

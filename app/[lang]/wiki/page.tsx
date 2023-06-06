@@ -42,10 +42,10 @@ const WikiPage = () => {
       </div>
       <div className='w-2/3 mt-4'>
         {filteredArticles.map(article => (
-          <div key={article.path} className='p-4 border bg-white'>
+          <div key={article.path} className='p-4 border border-base-300 bg-base-200 font-bold'>
             <Link
               href={`wiki/${article.path}`}
-              className={` text-textSecondary hover:text-textHover`}
+              className={` text-primary-content hover:text-accent-focus`}
             >
               - {article.title}
             </Link>

@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: (
       <Link href='https://goo.gl/maps/uiR9Q3m2Ag4M9mKAA' target='_blank'>
-        <MdLocationPin className='text-bgPrimary hover:text-black' size={70} />
+        <MdLocationPin className='text-bg-primary-content hover:text-black' size={70} />
       </Link>
     ),
     title: 'Διεύθνση',
@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: (
       <Link href={`tel:${PHONE}`}>
-        <MdOutlinePhone className='text-bgPrimary hover:text-black' size={70} />
+        <MdOutlinePhone className='text-bg-primary-content hover:text-black' size={70} />
       </Link>
     ),
     title: 'Τηλέφωνο',
@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: (
       <Link href={`mailto:${MAIL}`}>
-        <MdMailOutline className='text-bgPrimary hover:text-black' size={70} />
+        <MdMailOutline className='text-bg-primary-content hover:text-black' size={70} />
       </Link>
     ),
     title: 'Email',

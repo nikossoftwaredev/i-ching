@@ -13,14 +13,17 @@ const About = (): JSX.Element => {
               className='rounded-xl h-full object-cover '
             />
           </div>
-          <div className='flex flex-col col-span-2'>
+          <div className='flex flex-col col-span-2 justify-center'>
             <span>
               Στο <strong>I Ching : balance way</strong> παρέχουμε ένα πλήρες εφαρμοσμένο
               θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία του ανθρώπινου οργανισμού.
               Εκτός από συγκεκριμένες εσωτερικές και εξωτερικές παθήσεις, η ολιστική προσέγγιση και
               η κινέζικη ιατρική συμπληρώνουν έναν υγιή και ισορροπημένο τρόπο ζωής.
             </span>
-            <Link href='/services' className='text-bgPrimary hover:text-textSecondary mt-2'>
+            <Link
+              href='/services'
+              className='text-primary-content hover:text-accent-focus font-bold mt-2 self-start'
+            >
               Υπηρεσίες που προσφέρουμε...
             </Link>
           </div>

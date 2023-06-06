@@ -12,17 +12,32 @@ const Doctor = (): JSX.Element => {
           </div>
           <div className='flex flex-col col-span-2'>
             <span>
-              Η <strong>Κατερίνα Δημητρακοπούλου</strong> είναι θεραπεύτρια εκπαιδευμένη στην&nbsp;
-              <Link href='/about' className='text-textSecondary hover:text-textHover mt-2'>
-                κινέζικη ιατρική
+              Η
+              <Link
+                href='/about'
+                className='text-primary-content hover:text-accent-focus font-bold'
+              >
+                &nbsp;Κατερίνα Δημητρακοπούλου &nbsp;
               </Link>
-              &nbsp; και στις &nbsp;
-              <Link href='/about' className='text-textSecondary hover:text-textHover mt-2'>
-                ολιστικές θεραπείες.
+              είναι θεραπεύτρια εκπαιδευμένη στην
+              <Link
+                href='/wiki/chinese-medicine'
+                className='text-primary-content hover:text-accent-focus font-bold'
+              >
+                &nbsp;κινέζικη ιατρική&nbsp;
               </Link>
-              &nbsp;
+              και στις
+              <Link
+                href='/wiki/tecar-therapy'
+                className='text-primary-content hover:text-accent-focus font-bold'
+              >
+                &nbsp;ολιστικές θεραπείες. &nbsp;
+              </Link>
             </span>
-            <Link href='/about' className='text-textSecondary hover:text-textHover mt-2'>
+            <Link
+              href='/about'
+              className='text-primary-content hover:text-accent-focus font-bold mt-2 self-start'
+            >
               Δειτε το βιογραφικο....
             </Link>
           </div>

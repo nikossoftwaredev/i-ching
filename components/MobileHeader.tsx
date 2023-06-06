@@ -32,7 +32,7 @@ const MobileHeader = () => {
   return (
     <header>
       <nav className='pb-5 bg-white'>
-        <div className='flex flex-wrap justify-end items-end  max-w-screen mb-4 bg-bgPrimary gap-7  text-primary-50 py-3 pr-1'>
+        <div className='flex flex-wrap justify-end items-end  max-w-screen mb-4 bg-bg-primary-content gap-7  text-primary-50 py-3 pr-1'>
           <MdMenu className='ml-auto' size={40} />
         </div>
       </nav>

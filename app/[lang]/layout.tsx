@@ -19,7 +19,7 @@ const RootLayout = async ({ children, params }: PageProps): Promise<JSX.Element>
     <html lang={params.lang} data-theme='retro'>
       <body>
         <Header dictionary={dictionary} lang={params.lang} />
-        <main className='bg-base-100'>
+        <main className='bg-base-100 px-4'>
           {children}
           <AppointmentForm />
         </main>

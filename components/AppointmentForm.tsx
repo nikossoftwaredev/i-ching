@@ -105,9 +105,7 @@ const AppointmentForm = () => {
               );
             })}
 
-            <Button className='mt-5' variant='primary'>
-              Κλείσε Ραντεβού
-            </Button>
+            <Button className='mt-5'>Κλεισε Ραντεβου</Button>
           </div>
         </form>
       </Card>

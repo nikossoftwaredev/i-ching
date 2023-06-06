@@ -10,10 +10,10 @@ interface ButtonProps {
 }
 
 const variantStyles = {
-  primary: 'bg-bgPrimary text-white hover:bg-black',
-  secondary: 'bg-white hover:bg-bgPrimary text-bgPrimary',
-  default: 'bg-white hover:bg-bgPrimary text-bgPrimary',
-  transparent: 'bg-white hover:bg-bgPrimary text-bgPrimary'
+  primary: 'bg-bg-primary-content text-white hover:bg-black',
+  secondary: 'bg-white hover:bg-bg-primary-content text-bg-primary-content',
+  default: 'bg-white hover:bg-bg-primary-content text-bg-primary-content',
+  transparent: 'bg-white hover:bg-bg-primary-content text-bg-primary-content'
 };
 const ButtonLink = (props: ButtonProps) => {
   const { className, children, loading = false, variant = 'primary', href } = props;

@@ -1,4 +1,4 @@
-import { ADDRESS, MAIL, PHONE } from 'data/general';
+import { ADDRESS, DOMAIN, MAIL, PHONE } from 'data/general';
 import {
   MdMailOutline,
   MdOutlineCalendarToday,
@@ -11,8 +11,8 @@ const footerSections = [
   {
     title: 'Ωράριο λειτουργίας',
     subtitles: [
-      { icon: <MdOutlineCalendarToday />, value: 'Δευτέρα - Παρασκευή' },
-      { icon: <MdAccessTime />, value: '9:00 - 21:00' }
+      { icon: <MdOutlineCalendarToday />, value: 'Σάββατο - Κυριακή' },
+      { icon: <MdAccessTime />, value: '12:00 - 20:00' }
     ]
   },
   {
@@ -27,7 +27,7 @@ const footerSections = [
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className='bg-black text-white flex items-center flex-col py-10'>
+    <footer className='bg-primary-content text-neutral-content flex items-center flex-col py-10'>
       <div className='flex justify-center items-start gap-20 pb-7  sm:flex-col md:flex-row flex-wrap'>
         {footerSections.map(footerSection => (
           <section key={footerSection.title}>
@@ -41,7 +41,7 @@ const Footer = (): JSX.Element => {
         ))}
       </div>
       <section className='text-center'>
-        © Copyright 2022 iatriki-apokatastasi.gr. Με την επιφύλαξη παντός δικαιώματος.
+        © Copyright 2023 {DOMAIN}. Με την επιφύλαξη παντός δικαιώματος.
       </section>
     </footer>
   );

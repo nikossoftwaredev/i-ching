@@ -27,7 +27,7 @@ const items = [
 const Banner = () => {
   return (
     <div className={`relative w-full flex items-center justify-center`}>
-      <div className='-mt-96 sm:w-4/5 xl:w-2/3 shadow-lg bg-bgPrimary p-14 text-white rounded-lg small'>
+      <div className='-mt-96 sm:w-4/5 xl:w-2/3 shadow-lg bg-bg-primary-content p-14 text-white rounded-lg small'>
         <section className='flex flex-col lg:flex-row gap-4 justify-center'>
           {items.map(item => (
             <div

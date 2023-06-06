@@ -1,6 +1,8 @@
 export const PHONE = '6983384847';
+export const ΙΝSTAGRAM = 'i_ching_balance_way';
 export const ADDRESS = 'Νίκης 61, Άλιμος';
 export const MAIL = 'iching.balanceway@gmail.com';
+export const DOMAIN = 'https://ichingbalance.gr';
 export const START_YEAR = 2023;
 export const NAME = 'Κατερίνα';
 export const LAST_NAME = 'Δημητρακοπούλου';
