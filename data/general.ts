@@ -1,5 +1,6 @@
 export const PHONE = '6983384847';
 export const ΙΝSTAGRAM = 'i_ching_balance_way';
+export const INSTAGRAM_URL = 'https://www.instagram.com/i_ching_balance_way/';
 export const ADDRESS = 'Ανδρούτσου 22, Ηλιούπολη';
 export const MAIL = 'iching.balanceway@gmail.com';
 export const DOMAIN = 'https://ichingbalance.gr';

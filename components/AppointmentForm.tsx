@@ -6,8 +6,6 @@ import Card from 'components/Card';
 import TextField from 'components/TextField';
 import SectionTitle from 'components/SectionTitle';
 import TextArea from 'components/TextArea';
-import { MAIL } from '@/data/general';
-// import { sendMail } from '@/utils/email';
 
 interface InputFieldProps {
   id: string;

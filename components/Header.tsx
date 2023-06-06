@@ -4,7 +4,7 @@ import { MdMail, MdPhone, MdLocationPin } from 'react-icons/md';
 import { BsInstagram } from 'react-icons/bs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ADDRESS, MAIL, NAVIGATION, PHONE, ΙΝSTAGRAM } from 'data/general';
+import { ADDRESS, INSTAGRAM_URL, MAIL, NAVIGATION, PHONE, ΙΝSTAGRAM } from 'data/general';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo } from 'react';
 import Button from 'components/Button';
@@ -51,7 +51,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
         <div className='flex flex-wrap justify-center items-center sm:justify-end sm:items-end  w-full mb-4 bg-base-300 gap-7 text-primary-content py-3 pr-10'>
           <Link
             className='text-md flex gap-2 items-center active:text-bg-primary-content'
-            href={`tel:${PHONE}`}
+            href={INSTAGRAM_URL}
           >
             <BsInstagram size={30} />
             <span className='hidden sm:inline-block'>{ΙΝSTAGRAM}</span>

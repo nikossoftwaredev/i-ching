@@ -66,7 +66,7 @@ const getHTML = (formData: any) => {
   return html;
 };
 
-export const sendMail = async (formData: any) => {
+const sendMail = async (formData: any) => {
   const mailOptions = {
     from: formData.email,
     to: MAIL,
