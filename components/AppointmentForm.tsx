@@ -1,11 +1,13 @@
 'use client';
 
-import { ChangeEvent, HTMLInputTypeAttribute, useCallback, useState } from 'react';
+import { HTMLInputTypeAttribute, useCallback, useState } from 'react';
 import Button from 'components/Button';
 import Card from 'components/Card';
 import TextField from 'components/TextField';
 import SectionTitle from 'components/SectionTitle';
 import TextArea from 'components/TextArea';
+import { MAIL } from '@/data/general';
+// import { sendMail } from '@/utils/email';
 
 interface InputFieldProps {
   id: string;
@@ -73,6 +75,17 @@ const AppointmentForm = () => {
     []
   );
 
+  const onSendEmail = useCallback(() => {
+    const mailOptions = {
+      from: formData.email,
+      to: MAIL,
+      subject: `Appointment Request from ${formData.name}`,
+      text: formData.info
+    };
+
+    // sendMail(mailOptions);
+  }, [formData.email, formData.info, formData.name]);
+
   return (
     <main className='flex items-center justify-center flex-col'>
       <SectionTitle title='ΚΛΕΙΣΕ ΡΑΝΤΕΒΟΥ' />
@@ -105,7 +118,9 @@ const AppointmentForm = () => {
               );
             })}
 
-            <Button className='mt-5'>Κλεισε Ραντεβου</Button>
+            <Button className='mt-5' onClick={onSendEmail}>
+              Κλεισε Ραντεβου
+            </Button>
           </div>
         </form>
       </Card>
