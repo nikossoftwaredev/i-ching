@@ -20,38 +20,35 @@ interface InputFieldProps {
 
 const inputFields: InputFieldProps[] = [
   {
-    id: 'appointment-name',
-
+    id: 'name',
     dataField: 'name',
     inputType: 'text',
     placeholder: 'Όνομα',
     required: true
   },
   {
-    id: 'appointment-email',
-
+    id: 'email',
     dataField: 'email',
     inputType: 'email',
     placeholder: 'Email',
     required: true
   },
   {
-    id: 'appointment-phone',
-
+    id: 'phone',
     dataField: 'phone',
     inputType: 'tel',
     placeholder: 'Τηλέφωνο',
     required: true
   },
   {
-    id: 'appointment-date',
+    id: 'date',
     dataField: 'date',
     inputType: 'date',
     placeholder: 'Ημερομηνία Ραντεβού',
     required: true
   },
   {
-    id: 'appointment-info',
+    id: 'info',
     dataField: 'info',
     inputType: 'textarea',
     placeholder: 'Επιπλέον Πληροφορίες',
@@ -61,6 +58,7 @@ const inputFields: InputFieldProps[] = [
 ];
 
 const AppointmentForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<Record<string, any>>({
     name: '',
     date: new Date(),
@@ -75,15 +73,20 @@ const AppointmentForm = () => {
     []
   );
 
-  const onSendEmail = useCallback(() => {
-    const mailOptions = {
-      from: formData.email,
-      to: MAIL,
-      subject: `Appointment Request from ${formData.name}`,
-      text: formData.info
-    };
+  const onSendEmail = useCallback(async () => {
+    setLoading(true);
 
-    // sendMail(mailOptions);
+    await fetch('/api/send-mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        formData
+      })
+    });
+
+    setLoading(false);
   }, [formData.email, formData.info, formData.name]);
 
   return (
@@ -101,6 +104,7 @@ const AppointmentForm = () => {
                   className={colSpan ? 'col-span-full' : ''}
                   required={false}
                   rows={4}
+                  autoComplete={id}
                   value={formData.info as string}
                   placeholder='Επιπλέον Πληροφορίες'
                   onChange={onChangeFormData('info')}
@@ -113,12 +117,13 @@ const AppointmentForm = () => {
                   type={inputType}
                   value={formData[dataField as string]}
                   placeholder={placeholder}
+                  autoComplete={id}
                   onChange={onChangeFormData(dataField)}
                 />
               );
             })}
 
-            <Button className='mt-5' onClick={onSendEmail}>
+            <Button className='mt-5' onClick={onSendEmail} loading={loading}>
               Κλεισε Ραντεβου
             </Button>
           </div>

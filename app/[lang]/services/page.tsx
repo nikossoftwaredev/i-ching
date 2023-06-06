@@ -1,5 +1,4 @@
 import Card from 'components/Card';
-import Image from 'next/image';
 import SectionTitle from 'components/SectionTitle';
 import { servicesInfo } from 'data/services';
 import TextToHtml from 'components/TextToHtml';
@@ -28,7 +27,7 @@ const ServicesPage = () => {
                 <TextToHtml text={service.description} />
               </span>
               <div className='flex mt-auto'>
-                <ButtonLink className='ml-auto' href={`/scientific-articles#${service.serviceId}`}>
+                <ButtonLink className='ml-auto' href={`/wiki#${service.serviceId}`}>
                   ΠΕΡΙΣΣΟΤΕΡΑ
                 </ButtonLink>
               </div>

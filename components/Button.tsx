@@ -13,16 +13,17 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button
-      type='submit'
+      type='button'
       {...props}
       className={`btn btn-${variant} ${outlined ? 'btn-outline' : 'btn-active'} ${className}`}
     >
-      {children}
-      {loading && (
+      {loading ? (
         <>
           <span className='loading loading-spinner'></span>
-          loading
+          LOADING
         </>
+      ) : (
+        children
       )}
     </button>
   );
