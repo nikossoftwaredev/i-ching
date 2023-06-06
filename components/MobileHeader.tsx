@@ -7,7 +7,7 @@ import logo from 'public/images/logo.png';
 import { ADDRESS, MAIL, PHONE } from 'data/general';
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
-import Button from 'ui/Button';
+import Button from 'components/Button';
 
 const linksConfig = [
   { path: '/', text: 'Αρχική' },

@@ -1,5 +1,5 @@
-import Card from 'ui/Card';
-import TextToHtml from 'ui/TextToHtml';
+import Card from 'components/Card';
+import TextToHtml from 'components/TextToHtml';
 
 type TimeInfo = { date: string; title: string };
 

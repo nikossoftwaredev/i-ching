@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { ADDRESS, MAIL, PHONE } from 'data/general';
 import { usePathname } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
-import Button from 'ui/Button';
-import MobileHeader from 'ui/MobileHeader';
+import Button from 'components/Button';
+import MobileHeader from 'components/MobileHeader';
 import { Locale } from 'i18n-config';
 
 const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {

@@ -1,5 +1,5 @@
-import About from 'ui/About';
-import Doctor from 'ui/Doctor';
+import About from 'components/About';
+import Doctor from 'components/Doctor';
 
 const Home = () => {
   return (

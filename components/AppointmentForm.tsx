@@ -1,11 +1,11 @@
 'use client';
 
 import { ChangeEvent, HTMLInputTypeAttribute, useCallback, useState } from 'react';
-import Button from 'ui/Button';
-import Card from 'ui/Card';
-import TextField from 'ui/TextField';
-import SectionTitle from 'ui/SectionTitle';
-import TextArea from 'ui/TextArea';
+import Button from 'components/Button';
+import Card from 'components/Card';
+import TextField from 'components/TextField';
+import SectionTitle from 'components/SectionTitle';
+import TextArea from 'components/TextArea';
 
 interface InputFieldProps {
   id: string;

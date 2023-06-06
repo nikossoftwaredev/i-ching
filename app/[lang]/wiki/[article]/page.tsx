@@ -1,7 +1,7 @@
 import { wikiArticles } from 'data/wiki-articles';
 import { PageProps } from 'types/general';
-import ButtonLink from 'ui/ButtonLink';
-import Card from 'ui/Card';
+import ButtonLink from 'components/ButtonLink';
+import Card from 'components/Card';
 
 const findPreviousArticlePath = (index: number): string => {
   const articleIndex = index === 0 ? wikiArticles.length - 1 : index - 1;

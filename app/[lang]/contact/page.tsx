@@ -2,7 +2,7 @@ import { ADDRESS, BUSINESS_NAME, MAIL, MAP_IFRAME, PHONE } from 'data/general';
 import { cloneElement } from 'react';
 import { MdMailOutline, MdOutlinePhone, MdLocationPin } from 'react-icons/md';
 import Image from 'next/image';
-import SectionTitle from 'ui/SectionTitle';
+import SectionTitle from 'components/SectionTitle';
 import Link from 'next/link';
 
 const contactInfo = [

@@ -1,9 +1,9 @@
-import Card from 'ui/Card';
+import Card from 'components/Card';
 import Image from 'next/image';
-import SectionTitle from 'ui/SectionTitle';
+import SectionTitle from 'components/SectionTitle';
 import { servicesInfo } from 'data/services';
-import TextToHtml from 'ui/TextToHtml';
-import ButtonLink from 'ui/ButtonLink';
+import TextToHtml from 'components/TextToHtml';
+import ButtonLink from 'components/ButtonLink';
 
 const ServicesPage = () => {
   return (

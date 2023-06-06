@@ -1,4 +1,4 @@
-import Card from 'ui/Card';
+import Card from 'components/Card';
 import Link from 'next/link';
 
 const About = (): JSX.Element => {

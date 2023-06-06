@@ -1,11 +1,11 @@
-import Footer from 'ui/Footer';
-import Header from 'ui/Header';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
 
 import './global.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import { i18n } from 'i18n-config';
 import { getDictionary } from 'utils/get-dictionary';
-import AppointmentForm from 'ui/AppointmentForm';
+import AppointmentForm from 'components/AppointmentForm';
 import { PageProps } from 'types/general';
 
 export async function generateStaticParams() {
@@ -16,10 +16,10 @@ const RootLayout = async ({ children, params }: PageProps): Promise<JSX.Element>
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} data-theme='retro'>
       <body>
         <Header dictionary={dictionary} lang={params.lang} />
-        <main className='bg-bgSecondary'>
+        <main className='bg-base-100'>
           {children}
           <AppointmentForm />
         </main>
