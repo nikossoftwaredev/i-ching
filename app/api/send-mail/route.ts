@@ -4,9 +4,6 @@ import { NextResponse } from 'next/server';
 import { formatDate } from '@/utils/date';
 
 const getHTML = (formData: any) => {
-  const { name, date, email, info } = formData;
-  const formattedDate = formatDate(date);
-
   const html = `
       <!DOCTYPE html>
       <html>
@@ -35,22 +32,16 @@ const getHTML = (formData: any) => {
       </head>
       <body>
           <div class="container">
-              <div class="row">
-                  <label>Name:</label>
-                  <span>${name}</span>
-              </div>
-              <div class="row">
-                  <label>Date:</label>
-                  <span>${formattedDate}</span>
-              </div>
-              <div class="row">
-                  <label>Email:</label>
-                  <span>${email}</span>
-              </div>
-              <div class="row">
-                  <label>Info:</label>
-                  <span>${info}</span>
-              </div>
+          ${Object.keys(formData)
+            .map(key => {
+              let value = formData[key];
+              if (key === 'date') value = formatDate(value);
+              return `<div class="row">
+                      <label>${key}:</label>
+                      <span>${value}</span>
+                  </div>`;
+            })
+            .join('')}
           </div>
       </body>
       </html>
@@ -62,8 +53,8 @@ const getHTML = (formData: any) => {
 const sendMail = async (formData: any) => {
   const mailOptions = {
     from: formData.email,
-    to: MAIL,
-    subject: `Appointment Request from ${formData.name}`,
+    to: 'solonoodle1997@gmail.com',
+    subject: `Appointment Request from ${formData.firstName} ${formData.lastName}`,
     html: getHTML(formData)
   };
 
@@ -72,7 +63,7 @@ const sendMail = async (formData: any) => {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'solonoodle1997@gmail.com',
+      user: MAIL,
       pass: 'VwzkHghYRaFE7U1W'
     }
   });

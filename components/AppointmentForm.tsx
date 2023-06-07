@@ -8,9 +8,18 @@ import SectionTitle from 'components/SectionTitle';
 import TextArea from 'components/TextArea';
 import dayjs from 'dayjs';
 
+const initFormData = {
+  firstname: '',
+  surname: '',
+  phone: '',
+  date: dayjs().format('YYYY-MM-DD'),
+  email: '',
+  info: ''
+};
+
 interface InputFieldProps {
   id: string;
-  dataField: string;
+  dataField: keyof typeof initFormData;
   inputType: HTMLInputTypeAttribute;
   placeholder: string;
   required: boolean;
@@ -66,12 +75,7 @@ const inputFields: InputFieldProps[] = [
 
 const AppointmentForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [formData, setFormData] = useState<Record<string, any>>({
-    name: '',
-    date: dayjs().format('YYYY-MM-DD'),
-    email: '',
-    info: ''
-  });
+  const [formData, setFormData] = useState<Record<string, any>>(initFormData);
 
   console.log(formData);
 
@@ -87,15 +91,20 @@ const AppointmentForm = () => {
       e.preventDefault();
       setLoading(true);
 
-      await fetch('/api/send-mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          formData
-        })
-      });
+      try {
+        await fetch('/api/send-mail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            formData
+          })
+        });
+        setFormData(initFormData);
+      } catch (err) {
+        console.log(err);
+      }
 
       setLoading(false);
     },

@@ -1,4 +1,5 @@
 import { ADDRESS, DOMAIN, MAIL, PHONE } from 'data/general';
+import Link from 'next/link';
 import {
   MdMailOutline,
   MdOutlineCalendarToday,
@@ -43,7 +44,16 @@ const Footer = (): JSX.Element => {
         ))}
       </div>
       <section className='text-center'>
-        © Copyright 2023 {DOMAIN}. Με την επιφύλαξη παντός δικαιώματος.
+        © Copyright 2023 <strong>ichingbalance.gr</strong> <br />
+        Με την επιφύλαξη παντός δικαιώματος.
+        <br />
+        Made by
+        <Link
+          href='https://www.linkedin.com/in/nikosdim97/'
+          className='text-accent-focus hover:text-secondary-focus font-bold'
+        >
+          &nbsp; Nikos Dimitrakopoulos&nbsp;
+        </Link>
       </section>
     </footer>
   );
