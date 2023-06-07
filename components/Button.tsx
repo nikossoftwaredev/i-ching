@@ -10,11 +10,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = (props: ButtonProps) => {
   const { className, children, loading = false, variant, outlined = true } = props;
+  const buttonPros = { ...props };
+  delete buttonPros.loading;
+  delete buttonPros.variant;
+  delete buttonPros.outlined;
+  delete buttonPros.className;
+  delete buttonPros.children;
 
   return (
     <button
       type='button'
-      {...props}
+      {...buttonPros}
       className={`btn btn-${variant} ${outlined ? 'btn-outline' : 'btn-active'} ${className}`}
     >
       {loading ? (

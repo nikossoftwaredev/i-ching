@@ -1,6 +1,13 @@
 'use client';
 
-import { HTMLInputTypeAttribute, useCallback, useState } from 'react';
+import {
+  EventHandler,
+  HTMLInputTypeAttribute,
+  MouseEventHandler,
+  ReactEventHandler,
+  useCallback,
+  useState
+} from 'react';
 import Button from 'components/Button';
 import Card from 'components/Card';
 import TextField from 'components/TextField';
@@ -18,35 +25,35 @@ interface InputFieldProps {
 
 const inputFields: InputFieldProps[] = [
   {
-    id: 'name',
+    id: 'appointment-name',
     dataField: 'name',
     inputType: 'text',
     placeholder: 'Όνομα',
     required: true
   },
   {
-    id: 'email',
+    id: 'appointment-email',
     dataField: 'email',
     inputType: 'email',
     placeholder: 'Email',
     required: true
   },
   {
-    id: 'phone',
+    id: 'appointment-phone',
     dataField: 'phone',
     inputType: 'tel',
     placeholder: 'Τηλέφωνο',
     required: true
   },
   {
-    id: 'date',
+    id: 'appointment-date',
     dataField: 'date',
     inputType: 'date',
     placeholder: 'Ημερομηνία Ραντεβού',
     required: true
   },
   {
-    id: 'info',
+    id: 'appointment-info',
     dataField: 'info',
     inputType: 'textarea',
     placeholder: 'Επιπλέον Πληροφορίες',
@@ -71,21 +78,27 @@ const AppointmentForm = () => {
     []
   );
 
-  const onSendEmail = useCallback(async () => {
-    setLoading(true);
+  const onSendEmail = useCallback(
+    async (e: React.MouseEvent<HTMLElement>) => {
+      e.preventDefault();
+      setLoading(true);
 
-    await fetch('/api/send-mail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        formData
-      })
-    });
+      await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          formData
+        })
+      });
 
-    setLoading(false);
-  }, [formData]);
+      setLoading(false);
+    },
+    [formData]
+  );
+
+  const disabled = Object.values(formData).some(value => !value);
 
   return (
     <main className='flex items-center justify-center flex-col'>
@@ -121,7 +134,13 @@ const AppointmentForm = () => {
               );
             })}
 
-            <Button className='mt-5 animate-pulse-scale' onClick={onSendEmail} loading={loading}>
+            <Button
+              className='mt-5'
+              onClick={onSendEmail}
+              disabled={disabled}
+              loading={loading}
+              type='submit'
+            >
               Κλεισε Ραντεβου
             </Button>
           </div>
