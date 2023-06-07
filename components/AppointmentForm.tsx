@@ -82,8 +82,6 @@ const AppointmentForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<Record<string, any>>(initFormData);
 
-  console.log(formData);
-
   const onChangeFormData = useCallback(
     (dataField: string) => (e: any) => {
       setFormData((prev) => ({ ...prev, [dataField]: e.target.value }));

@@ -72,7 +72,6 @@ const sendMail = async (formData: any) => {
 
   console.log('Message sent: %s', info.messageId);
 
-  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 };
 
 export async function POST(request: Request) {
