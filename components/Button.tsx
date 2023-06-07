@@ -25,7 +25,7 @@ const Button = (props: ButtonProps) => {
     >
       {loading ? (
         <>
-          <span className='loading loading-spinner'></span>
+          <span className='loading loading-infinity'></span>
           LOADING
         </>
       ) : (
