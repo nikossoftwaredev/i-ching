@@ -1,6 +1,37 @@
 "use client";
-
 import AppLink from "@/components/AppLink";
+import { useEffect, useState } from "react";
+const ALL_THEMES = [
+  "light",
+  "dark",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "retro",
+  "cyberpunk",
+  "valentine",
+  "halloween",
+  "retro",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "dracula",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
+  "lemonade",
+  "night",
+  "coffee",
+  "winter",
+];
 
 const Theme = ({ theme }: { theme: string }) => {
   return (
@@ -24,8 +55,9 @@ const Theme = ({ theme }: { theme: string }) => {
               localStorage.setItem("theme", theme);
             }}
           >
-            Primary
+            Activate
           </button>
+          <h1 className="text-primary">Buttons</h1>
           <button className="btn btn-secondary">Secondary</button>
           <button className="btn btn-accent">Accent</button>
           <button className="btn btn-outline">Default Outline</button>
@@ -43,4 +75,26 @@ const Theme = ({ theme }: { theme: string }) => {
   );
 };
 
-export default Theme;
+const Themes = () => {
+  const [themes, setThemes] = useState(ALL_THEMES);
+
+  useEffect(() => {
+    const selectedTheme = localStorage.getItem("theme") || "retro";
+
+    setThemes([
+      selectedTheme,
+      ...ALL_THEMES.filter((theme) => theme !== selectedTheme),
+    ]);
+    return;
+  }, []);
+
+  return (
+    <section className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 p-2 justify-center items-center">
+      {themes.map((theme) => (
+        <Theme key={theme} theme={theme} />
+      ))}
+    </section>
+  );
+};
+
+export default Themes;

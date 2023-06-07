@@ -1,8 +1,7 @@
-import Footer from "components/Footer";
-import Header from "@/components/header/Header";
-
 import "./global.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
+import Footer from "components/Footer";
+import Header from "@/components/header/Header";
 import { i18n } from "i18n-config";
 import { getDictionary } from "utils/get-dictionary";
 import AppointmentForm from "components/AppointmentForm";
@@ -19,7 +18,7 @@ const RootLayout = async ({
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <html lang={params.lang} data-theme="garden">
+    <html lang={params.lang} data-theme="retro">
       <body>
         <Header dictionary={dictionary} lang={params.lang} />
         <main className="bg-base-100 px-4">
