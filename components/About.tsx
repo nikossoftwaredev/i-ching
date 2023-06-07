@@ -10,7 +10,7 @@ const About = () => {
             <img
               src="/images/main_area.jpg"
               alt="main-area"
-              className="rounded-xl h-full object-cover "
+              className="rounded-xl h-full object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">

@@ -4,18 +4,18 @@ import AppLink from "@/components/AppLink";
 const Doctor = (): JSX.Element => {
   return (
     <section className="w-full flex flex-col items-center justify-center">
-      <Card className="xl:w-2/4 md:w-3/4 items-center justify-center p-5">
-        <section className="grid grid-cols-1 gap-10 justify-center items-center md:grid-cols-3">
-          <div className="h-full max-h-full relative col-span-1">
+      <Card className="xl:w-2/4 md:w-3/4 p-5">
+        <section className="grid grid-cols-1 gap-10 justify-center items-center md:grid-cols-2">
+          <div className="h-full max-h-full relative col-span-1 flex justify-center w-full">
             <img
               src="/images/doctor.jpg"
-              alt="main-area"
-              className="rounded-xl w-full"
+              alt="doctor"
+              className="rounded-xl h-full object-cover"
             />
           </div>
-          <div className="flex flex-col col-span-2">
+          <div className="flex flex-col">
             <span>
-              Η{" "}
+              Η
               <AppLink href="/about">
                 &nbsp;Κατερίνα Δημητρακοπούλου &nbsp;
               </AppLink>
