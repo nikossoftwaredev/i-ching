@@ -27,7 +27,7 @@ const Button = (props: ButtonProps) => {
     <button
       type="button"
       {...buttonPros}
-      className={`btn btn-${variant} ${
+      className={`btn ${variant ? `btn-${variant}` : ""} ${
         outlined ? "btn-outline" : "btn-active"
       } ${className}`}
     >

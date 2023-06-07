@@ -1,24 +1,16 @@
 "use client";
-
-import { MdMail, MdPhone, MdLocationPin } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
 import Link from "next/link";
-import {
-  ADDRESS,
-  INSTAGRAM_URL,
-  MAIL,
-  NAVIGATION,
-  PHONE,
-  ΙΝSTAGRAM,
-} from "data/general";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useMemo } from "react";
-import Button from "components/Button";
-import MobileHeader from "components/MobileHeader";
+import { useEffect, useMemo } from "react";
+import MobileHeader from "@/components/header/MobileHeader";
 import { Locale } from "i18n-config";
+import AppointmentScroll from "@/components/header/AppoinmentSroll";
+import { headerInfo } from "@/components/header/headerConfig";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
   const pathname = usePathname();
+  const { width } = useWindowSize();
 
   const linksConfig = useMemo(
     () => [
@@ -32,16 +24,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
     [dictionary, lang]
   );
 
-  const isMobile = 641 < 640;
-
-  const scrollToAppointment = useCallback(() => {
-    const appointmentDiv = document.getElementById("name");
-
-    if (appointmentDiv) {
-      appointmentDiv.scrollIntoView({ behavior: "smooth", block: "center" });
-      appointmentDiv.focus();
-    }
-  }, []);
+  const isMobile = width < 667;
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -55,31 +38,16 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
     <header>
       <nav className="bg-base-100">
         <div className="flex flex-wrap justify-center items-center sm:justify-end sm:items-end  w-full mb-4 bg-base-300 gap-7 text-primary-content py-3">
-          <Link
-            className="text-md flex gap-2 items-center active:text-bg-primary-content"
-            href={INSTAGRAM_URL}
-          >
-            <BsInstagram size={30} />
-            <span className="hidden sm:inline-block">{ΙΝSTAGRAM}</span>
-          </Link>
-          <Link
-            className="text-md flex gap-2 items-center active:text-bg-primary-content"
-            href={`tel:${PHONE}`}
-          >
-            <MdPhone size={30} />
-            <span className="hidden sm:inline-block">{PHONE}</span>
-          </Link>
-          <Link
-            className="text-md flex gap-2 items-center"
-            href={`mailto:${MAIL}`}
-          >
-            <MdMail size={30} />
-            <span className="hidden sm:inline-block">{MAIL}</span>
-          </Link>
-          <Link className="text-md flex gap-2 items-center" href={NAVIGATION}>
-            <MdLocationPin size={30} />
-            <span className="hidden sm:inline-block"> {ADDRESS}</span>
-          </Link>
+          {headerInfo.map(({ href, icon, text }) => (
+            <Link
+              className="text-md flex gap-2 items-center"
+              href={href}
+              key={href}
+            >
+              {icon}
+              <span className="hidden sm:inline-block">{text}</span>
+            </Link>
+          ))}
         </div>
         <ul className="w-full flex flex-col sm:flex-row gap-6 justify-center items-center mr-1">
           <Link href="/" className="flex items-center animate-pulse-scale">
@@ -105,7 +73,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
               </li>
             );
           })}
-          <Button onClick={scrollToAppointment}>Κλεισε Ραντεβου</Button>
+          <AppointmentScroll />
         </ul>
       </nav>
     </header>
