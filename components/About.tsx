@@ -13,7 +13,7 @@ const About = () => {
               className="rounded-xl h-full object-cover "
             />
           </div>
-          <div className="flex flex-col  justify-center">
+          <div className="flex flex-col justify-center">
             <span>
               Στο <strong>I Ching : balance way</strong> παρέχουμε ένα πλήρες
               εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία

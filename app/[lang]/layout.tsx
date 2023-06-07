@@ -19,7 +19,7 @@ const RootLayout = async ({
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <html lang={params.lang} data-theme="retro">
+    <html lang={params.lang} data-theme="garden">
       <body>
         <Header dictionary={dictionary} lang={params.lang} />
         <main className="bg-base-100 px-4">
