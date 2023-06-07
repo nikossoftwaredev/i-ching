@@ -36,7 +36,7 @@ const ALL_THEMES = [
 
 const Themes = () => {
   // const selectedTheme = localStorage.getItem("theme") || "garden";
-  const selectedTheme = localStorage.getItem("theme") || "garden";
+  const selectedTheme = "garden";
 
   const themes = [
     "selectedTheme",
