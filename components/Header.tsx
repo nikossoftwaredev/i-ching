@@ -29,7 +29,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
   const isMobile = 641 < 640;
 
   const scrollToAppointment = useCallback(() => {
-    const appointmentDiv = document.getElementById('appointment-name');
+    const appointmentDiv = document.getElementById('name');
 
     if (appointmentDiv) {
       appointmentDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });

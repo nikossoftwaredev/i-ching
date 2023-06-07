@@ -15,28 +15,28 @@ const Doctor = (): JSX.Element => {
               Η
               <Link
                 href='/about'
-                className='text-primary-content hover:text-accent-focus font-bold'
+                className='text-primary-content hover:text-secondary-focus font-bold'
               >
                 &nbsp;Κατερίνα Δημητρακοπούλου &nbsp;
               </Link>
               είναι θεραπεύτρια εκπαιδευμένη στην
               <Link
                 href='/wiki/chinese-medicine'
-                className='text-primary-content hover:text-accent-focus font-bold'
+                className='text-accent-focus hover:text-secondary-focus font-bold'
               >
                 &nbsp;κινέζικη ιατρική&nbsp;
               </Link>
               και στις
               <Link
                 href='/wiki/tecar-therapy'
-                className='text-primary-content hover:text-accent-focus font-bold'
+                className='text-accent-focus hover:text-secondary-focus font-bold'
               >
                 &nbsp;ολιστικές θεραπείες. &nbsp;
               </Link>
             </span>
             <Link
               href='/about'
-              className='text-primary-content hover:text-accent-focus font-bold mt-2 self-start'
+              className='text-accent-focus hover:text-secondary-focus font-bold mt-2 self-start'
             >
               Δειτε το βιογραφικο....
             </Link>

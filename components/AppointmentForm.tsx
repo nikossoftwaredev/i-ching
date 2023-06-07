@@ -1,18 +1,12 @@
 'use client';
 
-import {
-  EventHandler,
-  HTMLInputTypeAttribute,
-  MouseEventHandler,
-  ReactEventHandler,
-  useCallback,
-  useState
-} from 'react';
+import { HTMLInputTypeAttribute, useCallback, useState } from 'react';
 import Button from 'components/Button';
 import Card from 'components/Card';
 import TextField from 'components/TextField';
 import SectionTitle from 'components/SectionTitle';
 import TextArea from 'components/TextArea';
+import dayjs from 'dayjs';
 
 interface InputFieldProps {
   id: string;
@@ -25,39 +19,47 @@ interface InputFieldProps {
 
 const inputFields: InputFieldProps[] = [
   {
-    id: 'appointment-name',
-    dataField: 'name',
+    id: 'firstname',
+    dataField: 'firstname',
     inputType: 'text',
     placeholder: 'Όνομα',
     required: true
   },
   {
-    id: 'appointment-email',
+    id: 'surname',
+    dataField: 'surname',
+    inputType: 'text',
+    placeholder: 'Επώνυμο',
+    required: true
+  },
+  {
+    id: 'email',
     dataField: 'email',
     inputType: 'email',
     placeholder: 'Email',
     required: true
   },
   {
-    id: 'appointment-phone',
+    id: 'phone',
     dataField: 'phone',
     inputType: 'tel',
     placeholder: 'Τηλέφωνο',
     required: true
   },
   {
-    id: 'appointment-date',
+    id: 'date',
     dataField: 'date',
     inputType: 'date',
     placeholder: 'Ημερομηνία Ραντεβού',
-    required: true
+    required: true,
+    colSpan: 2
   },
   {
-    id: 'appointment-info',
+    id: 'info',
     dataField: 'info',
     inputType: 'textarea',
     placeholder: 'Επιπλέον Πληροφορίες',
-    required: true,
+    required: false,
     colSpan: 2
   }
 ];
@@ -66,10 +68,12 @@ const AppointmentForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<Record<string, any>>({
     name: '',
-    date: new Date(),
+    date: dayjs().format('YYYY-MM-DD'),
     email: '',
     info: ''
   });
+
+  console.log(formData);
 
   const onChangeFormData = useCallback(
     (dataField: string) => (e: any) => {
@@ -98,7 +102,12 @@ const AppointmentForm = () => {
     [formData]
   );
 
-  const disabled = Object.values(formData).some(value => !value);
+  const disabled = inputFields.some(inputField => {
+    const { dataField, required } = inputField;
+    const missingInfo = !formData[dataField];
+
+    return required && missingInfo;
+  });
 
   return (
     <main className='flex items-center justify-center flex-col'>
@@ -119,21 +128,23 @@ const AppointmentForm = () => {
                   value={formData.info as string}
                   placeholder='Επιπλέον Πληροφορίες'
                   onChange={onChangeFormData('info')}
+                  name={id}
                 />
               ) : (
                 <TextField
                   id={id}
                   key={dataField}
+                  className={colSpan ? 'col-span-full' : ''}
                   required={required}
                   type={inputType}
                   value={formData[dataField as string]}
                   placeholder={placeholder}
                   autoComplete={id}
                   onChange={onChangeFormData(dataField)}
+                  name={id}
                 />
               );
             })}
-
             <Button
               className='mt-5'
               onClick={onSendEmail}

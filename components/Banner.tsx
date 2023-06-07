@@ -1,7 +1,7 @@
 import { servicesInfo } from 'data/services';
 import React from 'react';
 import { MdVerifiedUser, MdMedicalServices, MdSentimentVerySatisfied } from 'react-icons/md';
-import { calculateYears } from 'utils/year';
+import { calculateYears } from '@/utils/date';
 
 const items = [
   {

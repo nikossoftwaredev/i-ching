@@ -22,7 +22,7 @@ const About = (): JSX.Element => {
             </span>
             <Link
               href='/services'
-              className='text-primary-content hover:text-accent-focus font-bold mt-2 self-start'
+              className='text-accent-focus hover:text-secondary-focus font-bold mt-2 self-start'
             >
               Υπηρεσίες που προσφέρουμε...
             </Link>

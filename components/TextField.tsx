@@ -6,7 +6,14 @@ type TextFieldProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, H
 const TextField = (props: TextFieldProps) => {
   const { className = '' } = props;
 
-  return <input {...props} className={`input input-bordered w-full ${className}`} />;
+  return (
+    <div className='form-control w-full max-w-xs'>
+      <label className='label'>
+        <span className='label-text font-bold capitalize'>{props.id}</span>
+      </label>
+      <input {...props} className={`input input-bordered w-full ${className}`} />
+    </div>
+  );
 };
 
 export default TextField;
