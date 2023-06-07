@@ -24,7 +24,7 @@ const MobileHeader = () => {
 
         <dialog
           id="my_modal_5"
-          className="h-screen w-screen bg-base-200 rounded-lg max-h-screen max-w-none"
+          className="h-screen-small w-screen bg-base-200 rounded-lg max-h-screen max-w-none"
         >
           <form method="dialog" className="flex flex-col items-center">
             <SectionTitle title="ΜΕΝΟΥ" />

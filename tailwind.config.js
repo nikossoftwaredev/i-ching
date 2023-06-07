@@ -4,6 +4,13 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   plugins: [require('daisyui')],
   darkMode: 'class',
+  theme: {
+    extend: {
+      height: {
+        "screen-small": "100svh"
+      }
+    }
+  },
   daisyui: {
     themes: [
       'light',
