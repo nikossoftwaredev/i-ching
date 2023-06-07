@@ -1,7 +1,6 @@
 "use client";
 
 import AppLink from "@/components/AppLink";
-import Link from "next/link";
 
 const ALL_THEMES = [
   "light",
