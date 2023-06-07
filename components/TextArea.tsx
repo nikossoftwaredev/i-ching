@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { DetailedHTMLProps, TextareaHTMLAttributes } from 'react';
+import { DetailedHTMLProps, TextareaHTMLAttributes } from "react";
 
 type TextFieldProps = DetailedHTMLProps<
   TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -9,7 +9,12 @@ type TextFieldProps = DetailedHTMLProps<
 const TextArea = (props: TextFieldProps) => {
   const { className } = props;
 
-  return <textarea {...props} className={`textarea textarea-bordered ${className}`} />;
+  return (
+    <textarea
+      {...props}
+      className={`textarea textarea-bordered ${className}`}
+    />
+  );
 };
 
 export default TextArea;

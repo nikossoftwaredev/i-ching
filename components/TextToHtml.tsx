@@ -1,6 +1,6 @@
 const TextToHtml = ({
-  text = '',
-  className = ''
+  text = "",
+  className = "",
 }: {
   text: string;
   className?: string;

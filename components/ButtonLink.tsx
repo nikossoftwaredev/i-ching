@@ -1,16 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import Link from 'next/link';
+import Link from "next/link";
+import { ReactNode } from "react";
 
 interface ButtonProps {
   href: string;
-  children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'default' | 'transparent';
+  children: ReactNode;
+  variant?: "primary" | "secondary" | "default" | "transparent";
   className?: string;
   outlined?: boolean;
 }
 
 const ButtonLink = (props: ButtonProps) => {
-  const { className, children, variant = 'primary', href } = props;
+  const { className, children, href } = props;
 
   return (
     <Link href={href} className={`btn btn-outline ${className}`}>

@@ -1,7 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "prettier", "plugin:prettier/recommended"],
-  "plugins": ["eslint-plugin-no-relative-import-paths", "eslint-plugin-prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "react-hooks", "eslint-plugin-no-relative-import-paths"],
   "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "no-unused-vars": "warn",
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
       {

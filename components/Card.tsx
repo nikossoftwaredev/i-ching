@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactNode } from "react";
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children: ReactNode;
   loading?: boolean;
-  variant?: 'primary' | 'secondary' | 'default' | 'transparent';
+  variant?: "primary" | "secondary" | "default" | "transparent";
 }
 
 const Card = (props: CardProps) => {
