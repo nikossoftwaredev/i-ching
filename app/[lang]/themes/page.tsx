@@ -35,10 +35,11 @@ const ALL_THEMES = [
 ];
 
 const Themes = () => {
+  // const selectedTheme = localStorage.getItem("theme") || "garden";
   const selectedTheme = localStorage.getItem("theme") || "garden";
 
   const themes = [
-    selectedTheme,
+    "selectedTheme",
     ...ALL_THEMES.filter((theme) => theme !== selectedTheme),
   ];
 
