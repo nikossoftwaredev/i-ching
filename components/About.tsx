@@ -1,5 +1,6 @@
 import AppLink from "@/components/AppLink";
 import Card from "components/Card";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -7,10 +8,11 @@ const About = () => {
       <Card className="xl:w-2/4 md:w-3/4 p-5">
         <section className="grid grid-cols-1 gap-10 justify-center items-center md:grid-cols-2">
           <div className="h-full max-h-full relative col-span-1 flex justify-center w-full">
-            <img
+            <Image
               src="/images/main_area.jpg"
               alt="main-area"
-              className="rounded-xl h-full object-cover"
+              className="rounded-xl object-cover"
+              fill
             />
           </div>
           <div className="flex flex-col justify-center">
