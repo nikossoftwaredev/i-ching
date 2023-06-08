@@ -9,7 +9,7 @@ const ServicesCarousel = () => {
       <SectionTitle title="ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ" />
       <section className="w-full flex flex-col items-center justify-center">
         <Card className="xl:w-2/4 md:w-3/4 p-5 max-w-full">
-          <div className="flex overflow-x-auto gap-4">
+          <div className="flex overflow-x-auto gap-4 justify-center items-center">
             {servicesInfo.map((service) => (
               <Card
                 key={service.serviceId}
