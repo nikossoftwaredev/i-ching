@@ -18,13 +18,23 @@ export const wikiArticles: WikiArticle[] = [
     contents: [{ section: 'Oλιστικές θεραπείες', sectionContent: '' }]
   },
   {
-    title: 'Περιτονιακή απελευθέρωση',
-    path: 'corona-defense3',
-    contents: [{ section: 'Περιτονιακή απελευθέρωση', sectionContent: '' }]
+    title: 'Moxibustion',
+    path: 'moxibustion',
+    contents: [{ section: 'Moxibustion', sectionContent: '' }]
   },
   {
-    title: 'Λεμφική αποσυμφόρηση',
-    path: 'corona-defense4',
-    contents: [{ section: 'Λεμφική αποσυμφόρηση', sectionContent: '' }]
-  }
+    title: 'Cupping Therapy',
+    path: 'cupping-therapy',
+    contents: [{ section: 'Cupping Therapy', sectionContent: '' }]
+  },
+  {
+    title: 'Diet Plan',
+    path: 'diet-plan',
+    contents: [{ section: 'Diet Plan', sectionContent: '' }]
+  },
+  {
+    title: 'Accupanture',
+    path: 'accupanture',
+    contents: [{ section: 'Accupanture', sectionContent: '' }]
+  },
 ];
