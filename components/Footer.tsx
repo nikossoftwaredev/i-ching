@@ -50,6 +50,9 @@ const Footer = (): JSX.Element => {
         ))}
       </div>
       <section className="text-center">
+        <div>
+          <button className="btn btn-ghost loading loading-infinity" />
+        </div>
         © Copyright 2023 <strong>{DOMAIN}</strong> <br />
         Με την επιφύλαξη παντός δικαιώματος.
         <br />
