@@ -10,6 +10,7 @@ const AppointmentScroll = () => {
       appointmentDiv.focus();
     }
   }, []);
+
   return (
     <Button className="animate-pulse-scale" onClick={scrollToAppointment}>
       Κλεισε Ραντεβου
