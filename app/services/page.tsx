@@ -8,7 +8,7 @@ const ServicesPage = () => {
   return (
     <main className="flex items-center justify-center flex-col">
       <SectionTitle title="ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ" />
-      <div className="w-4/5 items-center justify-items-center grid 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-10">
+      <div className="w-4/5 items-center justify-items-center grid 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10">
         {servicesInfo.map((service) => (
           <Card
             key={service.title}
@@ -22,9 +22,12 @@ const ServicesPage = () => {
               />
             </figure>
             <main className="p-5 w-full z-10 flex flex-col flex-auto">
-              <h1 className="font-extrabold text-2xl mb-4 text-accent-focus">
+              <h1 className="font-extrabold text-2xl text-accent-focus">
                 {service.title}
               </h1>
+              <h2 className="font-bold text-xl mb-4 text-accent">
+                ({service.subtitle})
+              </h2>
               <span className="break-words leading-6 mb-10">
                 <TextToHtml text={service.description} />
               </span>

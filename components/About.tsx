@@ -19,11 +19,26 @@ const About = () => {
               <strong className="text-accent-focus">
                 &nbsp;I Ching : balance way&nbsp;
               </strong>
-              παρέχουμε ένα πλήρες εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο
-              επιδιώκει την ισορροπία του ανθρώπινου οργανισμού. Εκτός από
-              συγκεκριμένες εσωτερικές και εξωτερικές παθήσεις, η ολιστική
-              προσέγγιση και η κινέζικη ιατρική συμπληρώνουν έναν υγιή και
-              ισορροπημένο τρόπο ζωής.
+              προσφέρουμε υπηρεσίες σωματικής ευεξίας.
+              <br /> Η
+              <strong className="text-accent-focus">
+                &nbsp;Κατερίνα Δημητρακοπούλου&nbsp;
+              </strong>
+              έχει πιστοποιηθεί στη θερμοθεραπεία με
+              <AppLink href="/wiki/tecar-therapy">&nbsp;μόξα</AppLink>, στη
+              μάλαξη με
+              <AppLink href="/wiki/tecar-therapy">
+                &nbsp;βεντούζες φωτιάς
+              </AppLink>
+              , στη
+              <AppLink href="/wiki/tecar-therapy">
+                &nbsp;συμβουλευτική διατροφής&nbsp;
+              </AppLink>
+              σύμφωνα με την κινεζική ιατρική και στο
+              <AppLink href="/wiki/tecar-therapy">
+                &nbsp;βελονισμό Balance
+              </AppLink>
+              .
             </span>
             <AppLink href="/services" className="mt-2 self-start">
               Υπηρεσίες που προσφέρουμε...
