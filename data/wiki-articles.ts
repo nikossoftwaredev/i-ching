@@ -33,8 +33,8 @@ export const wikiArticles: WikiArticle[] = [
     contents: [{ section: 'Diet Plan', sectionContent: '' }]
   },
   {
-    title: 'Accupanture',
-    path: 'accupanture',
-    contents: [{ section: 'Accupanture', sectionContent: '' }]
+    title: 'acupuncture',
+    path: 'acupuncture',
+    contents: [{ section: 'acupuncture', sectionContent: '' }]
   },
 ];

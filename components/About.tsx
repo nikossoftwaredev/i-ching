@@ -50,7 +50,7 @@ const About = () => {
                 &nbsp;συμβουλευτική διατροφής&nbsp;
               </AppLink>
               σύμφωνα με την κινεζική ιατρική και στο
-              <AppLink href="/wiki/accupanture">
+              <AppLink href="/wiki/acupuncture">
                 &nbsp;βελονισμό Balance
               </AppLink>
               .
