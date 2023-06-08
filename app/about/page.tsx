@@ -5,7 +5,7 @@ import { ADDRESS, LAST_NAME, NAME } from "data/general";
 const Curriculum = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center">
-      <Card className="w-2/4 p-5 flex flex-col gap-4">
+      <Card className="p-5 flex flex-col gap-4 w-full md:max-w-xl">
         <figure className="flex flex-col justify-center items-center">
           <img
             src="/images/doctor.jpg"

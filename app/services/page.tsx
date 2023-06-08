@@ -8,13 +8,13 @@ const ServicesPage = () => {
   return (
     <main className="flex items-center justify-center flex-col">
       <SectionTitle title="ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ" />
-      <div className="w-4/5 items-center justify-items-center grid 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10">
+      <div className="w-4/5 items-center justify-center grid 2xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10">
         {servicesInfo.map((service) => (
           <Card
             key={service.title}
-            className="flex flex-col max-w-[400px] overflow-x-hidden w-full hover:scale-105 transition ease-in-out duration-300 relative h-full"
+            className="flex flex-col max-w-[400px] overflow-x-hidden w-full hover:scale-105 transition ease-in-out duration-300"
           >
-            <figure className="w-full h-[200px] m-h-[200px] relative z-0  object-cover ">
+            <figure className="w-full h-[200px] m-h-[200px] relative object-cover">
               <img
                 className="w-full h-full object-cover"
                 src={service.image}
