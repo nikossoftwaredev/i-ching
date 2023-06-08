@@ -1,26 +1,13 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import MobileHeader from "@/components/header/MobileHeader";
-import { Locale } from "i18n-config";
 import AppointmentScroll from "@/components/header/AppointmentScroll";
-import { headerInfo } from "@/components/header/headerConfig";
+import { headerInfo, headerLinks } from "@/components/header/headerConfig";
 
-const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
+const Header = () => {
   const pathname = usePathname();
-
-  const linksConfig = useMemo(
-    () => [
-      { path: `/${lang}`, text: dictionary.header.home },
-      { path: `/${lang}/services`, text: dictionary.header.services },
-      { path: `/${lang}/about`, text: dictionary.header.about },
-      { path: `/${lang}/wiki`, text: dictionary.header.wiki },
-      { path: `/${lang}/contact`, text: dictionary.header.contact },
-      { path: `/${lang}/themes`, text: dictionary.header.themes },
-    ],
-    [dictionary, lang]
-  );
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -51,7 +38,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
             <Link href="/" className="flex items-center animate-pulse-scale">
               <img src="/images/logo.png" alt="Flowbite Logo" width="100px" />
             </Link>
-            {linksConfig.map((linkConfig) => {
+            {headerLinks.map((linkConfig) => {
               let isActive = pathname === linkConfig.path;
 
               if (linkConfig.path !== "/" && pathname) {

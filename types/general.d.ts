@@ -1,4 +1,3 @@
-import { Locale } from 'i18n-config';
 
 export interface WikiArticle {
   title: string;
@@ -11,7 +10,7 @@ export interface WikiArticle {
 
 export type PageProps = {
   children: never;
-  params: { lang: Locale; article: string };
+  params: {  article: string };
 };
 export interface HeaderConfig {
   field: string;
