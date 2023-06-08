@@ -1,3 +1,4 @@
+import AppLink from "@/components/AppLink";
 import { ADDRESS, DOMAIN, MAIL, PHONE } from "data/general";
 import Link from "next/link";
 import {
@@ -34,7 +35,7 @@ const Footer = (): JSX.Element => {
       <div className="flex justify-center items-start gap-20 pb-7  sm:flex-col md:flex-row flex-wrap">
         {footerSections.map((footerSection) => (
           <section key={footerSection.title}>
-            <h4 className="text-3xl pb-4 font-bold text-accent">
+            <h4 className="text-3xl pb-4 font-bold text-accent-focus">
               {footerSection.title}
             </h4>
             {footerSection.subtitles.map((subtitle) => (
@@ -53,12 +54,9 @@ const Footer = (): JSX.Element => {
         Με την επιφύλαξη παντός δικαιώματος.
         <br />
         Made by
-        <Link
-          href="https://www.linkedin.com/in/nikosdim97/"
-          className="text-accent hover:accent-focus font-bold"
-        >
+        <AppLink href="https://www.linkedin.com/in/nikosdim97/">
           &nbsp; Nikos Dimitrakopoulos&nbsp;
-        </Link>
+        </AppLink>
       </section>
     </footer>
   );

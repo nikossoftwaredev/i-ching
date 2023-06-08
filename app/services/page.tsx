@@ -22,7 +22,7 @@ const ServicesPage = () => {
               />
             </figure>
             <main className="p-5 w-full z-10 flex flex-col flex-auto">
-              <h1 className="font-extrabold text-2xl mb-4 text-accent">
+              <h1 className="font-extrabold text-2xl mb-4 text-accent-focus">
                 {service.title}
               </h1>
               <span className="break-words leading-6 mb-10">

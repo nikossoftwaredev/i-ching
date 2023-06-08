@@ -15,7 +15,7 @@ export const headerLinks = [
   { path: `/about`, text: "Βιογραφικό" },
   { path: `/wiki`, text: "Wiki" },
   { path: `/contact`, text: "Επικοινωνία" },
-  { path: `/themes`, text: "Θέματα" },
+  // { path: `/themes`, text: "Θέματα" },
 ];
 
 export const headerInfo = [
