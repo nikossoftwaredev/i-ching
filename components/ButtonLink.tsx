@@ -11,10 +11,13 @@ interface ButtonProps {
 }
 
 const ButtonLink = (props: ButtonProps) => {
-  const { className, children, href } = props;
+  const { className, children, href, outlined = true } = props;
 
   return (
-    <Link href={href} className={`btn btn-outline ${className}`}>
+    <Link
+      href={href}
+      className={`btn ${outlined ? "btn-outline" : ""} ${className}`}
+    >
       {children}
     </Link>
   );

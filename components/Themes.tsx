@@ -1,6 +1,7 @@
 "use client";
 import AppLink from "@/components/AppLink";
 import { useEffect, useState } from "react";
+
 const ALL_THEMES = [
   "light",
   "dark",
@@ -89,7 +90,7 @@ const Themes = () => {
   }, []);
 
   return (
-    <section className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 p-2 justify-center items-center">
+    <section className="grid gap-4 grid-cols-1 p-2 justify-center items-center">
       {themes.map((theme) => (
         <Theme key={theme} theme={theme} />
       ))}

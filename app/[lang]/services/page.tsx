@@ -14,9 +14,9 @@ const ServicesPage = () => {
             key={service.title}
             className="flex flex-col max-w-[400px] overflow-x-hidden w-full hover:scale-105 transition ease-in-out duration-300 relative h-full"
           >
-            <figure className="w-full h-[200px] m-h-[200px] relative z-0 brightness-75 transition ease-in-out duration-300 object-cover ">
+            <figure className="w-full h-[200px] m-h-[200px] relative z-0 brightness-75 object-cover ">
               <img
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                className="w-full h-full object-cover"
                 src={service.image}
                 alt={service.title}
               />

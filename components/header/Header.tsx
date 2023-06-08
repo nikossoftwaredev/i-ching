@@ -37,7 +37,7 @@ const Header = ({ dictionary, lang }: { dictionary: any; lang: Locale }) => {
   ) : (
     <header>
       <nav className="bg-base-100">
-        <div className="flex flex-wrap justify-center items-center sm:justify-end sm:items-end  w-full mb-4 bg-base-300 gap-7  py-3 pr-1">
+        <div className="flex flex-wrap justify-center items-center  w-full mb-4 bg-base-300 gap-7  py-3 pr-1">
           {headerInfo.map(({ href, icon, text }) => (
             <Link
               className="text-md flex gap-2 items-center"
