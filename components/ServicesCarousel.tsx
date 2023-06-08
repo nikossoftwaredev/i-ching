@@ -14,7 +14,7 @@ const ServicesCarousel = () => {
               <Link
                 href={`/wiki#${service.serviceId}`}
                 key={service.serviceId}
-                className="rounded-lg shadow-xl relative h-[300px] w-[300px]  flex flex-col flex-shrink-0 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
+                className="rounded-lg shadow-xl relative h-[300px] w-[250px]  flex flex-col flex-shrink-0 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
               >
                 <div className="rounded-t-lg grow bg-base-300 flex flex-col justify-center items-center p-2">
                   <h1 className="text-center font-bold text-2xl text-accent-focus">
