@@ -6,8 +6,19 @@ import { servicesInfo } from "@/data/services";
 import About from "components/About";
 import { Metadata } from "next";
 
-const keywords = servicesInfo
-  .map((service) => `${service.title}: ${service.subtitle}`)
+const staticKeywords = [
+  "πόνος στην πλάτη",
+  "βελονισμός ηλιούπολη",
+  "Κατερινα Δημητρακοπούλου",
+  "πονος στον αυχενα",
+  "πονος",
+  "πονος ηλιούπολη",
+];
+
+const keywords = staticKeywords
+  .concat(
+    servicesInfo.map((service) => `${service.title}: ${service.subtitle}`)
+  )
   .join(", ");
 
 export const metadata: Metadata = {
