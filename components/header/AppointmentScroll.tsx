@@ -3,7 +3,7 @@ import { useCallback } from "react";
 
 const AppointmentScroll = () => {
   const scrollToAppointment = useCallback(() => {
-    const appointmentDiv = document.getElementById("firstname");
+    const appointmentDiv = document.getElementById("name");
 
     if (appointmentDiv) {
       appointmentDiv.scrollIntoView({ behavior: "smooth", block: "center" });

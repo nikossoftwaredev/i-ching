@@ -54,7 +54,7 @@ const sendMail = async (formData: any) => {
   const mailOptions = {
     from: formData.email,
     to: 'solonoodle1997@gmail.com',
-    subject: `Appointment Request from ${formData.firstName} ${formData.lastName}`,
+    subject: `Appointment Request from ${formData.name}`,
     html: getHTML(formData)
   };
 

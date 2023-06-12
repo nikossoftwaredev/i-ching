@@ -21,6 +21,7 @@ const footerSections = [
   },
   {
     title: "Επικοινωνία",
+    link: "/contact",
     subtitles: [
       { icon: <MdLocationPin />, value: ADDRESS },
       { icon: <MdOutlinePhone />, value: PHONE },
@@ -32,11 +33,17 @@ const footerSections = [
 const Footer = (): JSX.Element => {
   return (
     <footer className="bg-base-300 flex items-center flex-col py-10">
-      <div className="flex justify-center items-start gap-20 pb-7  sm:flex-col md:flex-row flex-wrap">
+      <div className="flex justify-center items-start gap-20 pb-5  sm:flex-col md:flex-row flex-wrap">
         {footerSections.map((footerSection) => (
           <section key={footerSection.title}>
-            <h4 className="text-3xl pb-4 font-bold text-accent-focus">
-              {footerSection.title}
+            <h4 className="text-3xl pb-3 font-bold text-accent-focus">
+              {footerSection.link ? (
+                <AppLink href={footerSection.link}>
+                  {footerSection.title}
+                </AppLink>
+              ) : (
+                <span>{footerSection.title}</span>
+              )}
             </h4>
             {footerSection.subtitles.map((subtitle) => (
               <div

@@ -14,8 +14,7 @@ import TextArea from "components/TextArea";
 import dayjs from "dayjs";
 
 const initFormData = {
-  firstname: "",
-  surname: "",
+  name: "",
   phone: "",
   date: dayjs().format("YYYY-MM-DD"),
   email: "",
@@ -33,17 +32,10 @@ interface InputFieldProps {
 
 const inputFields: InputFieldProps[] = [
   {
-    id: "firstname",
-    dataField: "firstname",
+    id: "name",
+    dataField: "name",
     inputType: "text",
     placeholder: "Όνομα",
-    required: true,
-  },
-  {
-    id: "surname",
-    dataField: "surname",
-    inputType: "text",
-    placeholder: "Επώνυμο",
     required: true,
   },
   {
