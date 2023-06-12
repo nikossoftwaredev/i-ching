@@ -58,7 +58,6 @@ const inputFields: InputFieldProps[] = [
     inputType: "date",
     placeholder: "Ημερομηνία Ραντεβού",
     required: true,
-    colSpan: 2,
   },
   {
     id: "info",
