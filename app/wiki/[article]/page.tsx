@@ -2,6 +2,7 @@ import { wikiArticles } from "data/wiki-articles";
 import { PageProps } from "types/general";
 import ButtonLink from "components/ButtonLink";
 import Card from "components/Card";
+import { Metadata } from "next";
 
 const findPreviousArticlePath = (index: number): string => {
   const articleIndex = index === 0 ? wikiArticles.length - 1 : index - 1;
@@ -12,6 +13,25 @@ const findNextArticlePath = (index: number): string => {
   const articleIndex = index === wikiArticles.length - 1 ? 0 : index + 1;
   return wikiArticles[articleIndex].path;
 };
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { article } = params;
+
+  const articleInfoIndex = wikiArticles.findIndex((sc) => sc.path === article);
+  const articleInfo = wikiArticles[articleInfoIndex ?? 0];
+
+  const { title, contents, path } = articleInfo;
+
+  return {
+    title,
+    description: contents[0].sectionContent,
+    openGraph: {
+      images: `https://ichingbalance.gr/images/services/${path}.webp`,
+    },
+  };
+}
 
 const Page = ({ params }: PageProps) => {
   const { article } = params;
