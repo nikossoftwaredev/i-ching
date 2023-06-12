@@ -1,7 +1,7 @@
 import Doctor from "@/components/Doctor";
 import SectionTitle from "@/components/SectionTitle";
 import ServicesCarousel from "@/components/ServicesCarousel";
-import { BUSINESS_NAME, NAME } from "@/data/general";
+import { BUSINESS_NAME, LAST_NAME, NAME } from "@/data/general";
 import { servicesInfo } from "@/data/services";
 import About from "components/About";
 import { Metadata } from "next";
@@ -9,12 +9,15 @@ import { Metadata } from "next";
 const staticKeywords = [
   "πόνος στην πλάτη",
   "βελονισμός ηλιούπολη",
-  "Κατερινα Δημητρακοπούλου",
   "πονος στον αυχενα",
   "πονος",
   "πονος ηλιούπολη",
+  NAME,
+  LAST_NAME,
 ];
 
+const description =
+  "Στο I Ching : balance way παρέχουμε ένα πλήρες εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία του ανθρώπινου οργανισμού.";
 const keywords = staticKeywords
   .concat(
     servicesInfo.map((service) => `${service.title}: ${service.subtitle}`)
@@ -22,16 +25,15 @@ const keywords = staticKeywords
   .join(", ");
 
 export const metadata: Metadata = {
-  title: NAME,
-  description:
-    "Στο I Ching : balance way παρέχουμε ένα πλήρες εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία του ανθρώπινου οργανισμού.",
+  title: BUSINESS_NAME,
+  description,
   keywords,
   applicationName: BUSINESS_NAME,
   robots: "index, follow",
   openGraph: {
-    title: NAME,
-    description: keywords,
-    images: ["/images/favicon.ico", "/images/main_area.webp"],
+    title: BUSINESS_NAME,
+    description,
+    images: "/images/main_area.webp",
   },
 };
 
