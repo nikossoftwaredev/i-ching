@@ -17,7 +17,8 @@ const staticKeywords = [
 ];
 
 const description =
-  "Στο I Ching : balance way παρέχουμε ένα πλήρες εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία του ανθρώπινου οργανισμού.";
+  "Στο I Ching : balance way παρέχουμε ένα πλήρες εφαρμοσμένο θεραπευτικό πρόγραμμα το οποίο επιδιώκει την ισορροπία του ανθρώπινου οργανισμού.  Εκτός από συγκεκριμένες εσωτερικές και εξωτερικές παθήσεις, η ολιστική προσέγγιση και η κινέζικη ιατρική συμπληρώνουν έναν υγιή και ισορροπημένο τρόπο ζωής.  Η Κατερίνα Δημητρακοπούλου έχει πιστοποιηθεί στη θερμοθεραπεία με μόξα, στη μάλαξη με βεντούζες φωτιάς, στη συμβουλευτική διατροφής σύμφωνα με την κινεζική ιατρική και στο βελονισμό Balance.";
+
 const keywords = staticKeywords
   .concat(
     servicesInfo.map((service) => `${service.title}: ${service.subtitle}`)
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
   title: BUSINESS_NAME,
   description,
   keywords,
+  viewport: "width=device-width, initial-scale=1",
   applicationName: BUSINESS_NAME,
   robots: "index, follow",
   openGraph: {
