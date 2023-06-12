@@ -5,9 +5,6 @@ import Header from "@/components/header/Header";
 import AppointmentForm from "components/AppointmentForm";
 import { PageProps } from "types/general";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
 const RootLayout = async ({ children }: PageProps): Promise<JSX.Element> => {
   return (
     <html lang="el" data-theme="retro">
