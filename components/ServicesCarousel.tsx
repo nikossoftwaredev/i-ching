@@ -24,7 +24,7 @@ const ServicesCarousel = () => {
                   loading="lazy"
                 />
                 <div className="rounded-b-lg grow bg-white flex flex-row justify-center items-center p-2 font-bold text-2xl text-accent-focus gap-2">
-                  <h1 className="text-center ">{service.title}</h1>
+                  <h2 className="text-center ">{service.title}</h2>
                   <MdArrowForward />
                 </div>
               </Link>

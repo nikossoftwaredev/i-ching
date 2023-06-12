@@ -46,7 +46,7 @@ const Page = ({ params }: PageProps) => {
             key={content.section}
             className="xl:w-2/4 md:w-3/4 items-center justify-center p-5"
           >
-            <h1 className="font-bold">{content.section}</h1>
+            <section className="font-bold">{content.section}</section>
             <p>{content.sectionContent}</p>
           </Card>
         ))}

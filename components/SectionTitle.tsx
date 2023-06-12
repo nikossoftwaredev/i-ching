@@ -15,7 +15,7 @@ const SectionTitle = ({
         className={`sm:w-full md:w-2/4 flex items-center justify-${position}`}
       >
         <div className="h-0 border-t-2 flex-grow border-primary-content" />
-        <h1 className="font-black text-3xl text-center mx-3">{title}</h1>
+        <h2 className="font-black text-3xl text-center mx-3">{title}</h2>
         <div className="h-0 border-t-2 flex-grow border-primary-content" />
       </div>
     </div>
