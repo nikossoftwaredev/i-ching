@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BUSINESS_NAME,
     description,
-    images: "/images/main_area.webp",
+    images: "https://ichingbalance.gr/images/main_area.webp",
   },
 };
 
