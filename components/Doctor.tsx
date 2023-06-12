@@ -6,9 +6,11 @@ const Doctor = () => (
     <Card className="p-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-4 w-full md:max-w-xl">
       <figure className="flex flex-col items-center justify-center">
         <img
-          src="/images/doctor.jpg"
+          src="/images/doctor.webp"
           alt="katerina-dimitrakopoulou"
-          className="rounded-xl h-[300px] object-cover"
+          className="rounded-xl object-cover"
+          height={300}
+          loading="lazy"
         />
       </figure>
 

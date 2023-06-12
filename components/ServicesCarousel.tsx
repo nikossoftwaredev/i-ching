@@ -29,6 +29,7 @@ const ServicesCarousel = () => {
                   src={service.image}
                   className="rounded-b-lg object-cover h-4/5 w-full"
                   alt={service.title}
+                  loading="lazy"
                 />
               </Link>
             ))}

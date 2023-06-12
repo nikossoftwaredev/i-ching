@@ -59,8 +59,9 @@ const ContactPage = () => {
           <span className="flex items-center justify-center">
             <img
               alt="out-view"
-              src="/images/out-view.jpg"
+              src="/images/out-view.webp"
               className="object-cover rounded-lg"
+              loading="lazy"
             />
           </span>
           <div className="flex items-start justify-start gap-4 flex-col">

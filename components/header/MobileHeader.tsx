@@ -11,7 +11,12 @@ const MobileHeader = () => {
   return (
     <div className="flex items-center justify-between pt-2">
       <Link href="/" className="animate-pulse-scale">
-        <img src="/images/logo.png" alt="Flowbite Logo" width="80px" />
+        <img
+          src="/images/logo.png"
+          alt="Flowbite Logo"
+          width="80px"
+          height="80px"
+        />
       </Link>
       <AppointmentScroll />
       <button className="btn w-[76px] flex justify-center mr-1">

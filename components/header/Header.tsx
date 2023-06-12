@@ -36,7 +36,12 @@ const Header = () => {
           </div>
           <ul className="w-full flex flex-row gap-6 justify-center items-center mr-1">
             <Link href="/" className="flex items-center animate-pulse-scale">
-              <img src="/images/logo.png" alt="Flowbite Logo" width="100px" />
+              <img
+                src="/images/logo.png"
+                alt="Flowbite Logo"
+                width="100px"
+                height="100px"
+              />
             </Link>
             {headerLinks.map((linkConfig) => {
               let isActive = pathname === linkConfig.path;

@@ -8,9 +8,10 @@ const About = () => {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center ">
           <div className="flex justify-center">
             <img
-              src="/images/main_area.jpg"
+              src="/images/main_area.webp"
               alt="main-area"
               className="rounded-xl object-cover"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col justify-center">
