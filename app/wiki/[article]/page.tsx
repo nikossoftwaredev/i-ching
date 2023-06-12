@@ -33,6 +33,12 @@ export async function generateMetadata({
   };
 }
 
+export const generateStaticParams = async () => {
+  return wikiArticles.map((articleInfo) => ({
+    slug: articleInfo.path,
+  }));
+};
+
 const Page = ({ params }: PageProps) => {
   const { article } = params;
 

@@ -36,7 +36,7 @@ const ServicesPage = () => {
               <div className="flex mt-auto">
                 <ButtonLink
                   className="ml-auto"
-                  href={`/wiki#${service.serviceId}`}
+                  href={`/wiki/${service.serviceId}`}
                 >
                   ΠΕΡΙΣΣΟΤΕΡΑ
                 </ButtonLink>

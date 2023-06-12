@@ -13,7 +13,7 @@ const ServicesCarousel = () => {
           <div className="flex overflow-x-auto gap-4 justify-between p-2">
             {servicesInfo.map((service) => (
               <Link
-                href={`/wiki#${service.serviceId}`}
+                href={`/wiki/${service.serviceId}`}
                 key={service.serviceId}
                 className="overflow-y-hidden rounded-lg shadow-xl relative h-[300px] w-[250px]  flex flex-col flex-shrink-0 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
               >
