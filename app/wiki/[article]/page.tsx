@@ -14,30 +14,30 @@ const findNextArticlePath = (index: number): string => {
   return wikiArticles[articleIndex].path;
 };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { article } = params;
+// export async function generateMetadata({
+//   params,
+// }: PageProps): Promise<Metadata> {
+//   const { article } = params;
 
-  const articleInfoIndex = wikiArticles.findIndex((sc) => sc.path === article);
-  const articleInfo = wikiArticles[articleInfoIndex ?? 0];
+//   const articleInfoIndex = wikiArticles.findIndex((sc) => sc.path === article);
+//   const articleInfo = wikiArticles[articleInfoIndex ?? 0];
 
-  const { title, contents, path } = articleInfo;
+//   const { title, contents, path } = articleInfo;
 
-  return {
-    title,
-    description: contents[0].sectionContent,
-    openGraph: {
-      images: `https://ichingbalance.gr/images/services/${path}.webp`,
-    },
-  };
-}
+//   return {
+//     title,
+//     description: contents[0].sectionContent,
+//     openGraph: {
+//       images: `https://ichingbalance.gr/images/services/${path}.webp`,
+//     },
+//   };
+// }
 
-export const generateStaticParams = async () => {
+export async function generateStaticParams() {
   return wikiArticles.map((articleInfo) => ({
     slug: articleInfo.path,
   }));
-};
+}
 
 const Page = ({ params }: PageProps) => {
   const { article } = params;
