@@ -11,7 +11,7 @@ export const servicesInfo = [
     title: 'Moxibustion',
     subtitle: 'Θερμοθεραπεία με μόξα',
     description:
-      'Θερμοθεραπεία με μόξα, θεραπεία σημείων για πόνους και ευεξία με θερμότητα από το φυτό Artemisia Vulgaris (αρτεμισια)',
+      'Θερμοθεραπεία με μόξα, θεραπεία σημείων για πόνους και ευεξία με θερμότητα από το φυτό Artemisia Vulgaris (αρτεμισία)',
     image: '/images/services/moxibustion.webp',
     serviceId: 'moxibustion'
   },
