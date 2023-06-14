@@ -2,7 +2,7 @@ import { wikiArticles } from "data/wiki-articles";
 import { PageProps } from "types/general";
 import ButtonLink from "components/ButtonLink";
 import Card from "components/Card";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 const findPreviousArticlePath = (index: number): string => {
   const articleIndex = index === 0 ? wikiArticles.length - 1 : index - 1;
@@ -33,11 +33,11 @@ const findNextArticlePath = (index: number): string => {
 //   };
 // }
 
-export async function generateStaticParams() {
-  return wikiArticles.map((articleInfo) => ({
-    slug: articleInfo.path,
-  }));
-}
+// export async function generateStaticParams() {
+//   return wikiArticles.map((articleInfo) => ({
+//     slug: articleInfo.path,
+//   }));
+// }
 
 const Page = ({ params }: PageProps) => {
   const { article } = params;
