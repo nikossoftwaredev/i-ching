@@ -39,8 +39,7 @@ const Header = () => {
               <img
                 src="/images/logo.png"
                 alt="Flowbite Logo"
-                width="100px"
-                height="100px"
+                className="w-[100px] h-[100px]"
               />
             </Link>
             {headerLinks.map((linkConfig) => {

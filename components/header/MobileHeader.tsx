@@ -14,8 +14,7 @@ const MobileHeader = () => {
         <img
           src="/images/logo.png"
           alt="Flowbite Logo"
-          width="80px"
-          height="80px"
+          className="w-[80px] h-[80px]"
         />
       </Link>
       <AppointmentScroll />
