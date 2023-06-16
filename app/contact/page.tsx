@@ -10,6 +10,7 @@ import { cloneElement } from "react";
 import { MdMailOutline, MdOutlinePhone, MdLocationPin } from "react-icons/md";
 import SectionTitle from "components/SectionTitle";
 import Link from "next/link";
+import Card from "@/components/Card";
 
 const contactInfo = [
   {
@@ -56,14 +57,14 @@ const ContactPage = () => {
       <div className="sm:w-full xl:w-2/4 flex items-center justify-center flex-col gap-2">
         <SectionTitle title="ΕΠΙΚΟΙΝΩΝΙΑ" className="mt-10" />
         <div className="grid sm:grid-cols-1 md:grid-cols-2 w-full gap-14 items-center justify-center">
-          <span className="flex items-center justify-center">
+          <Card className="flex items-center justify-center shadow-md">
             <img
               alt="out-view"
               src="/images/out-view.webp"
               className="object-cover rounded-lg"
               loading="lazy"
             />
-          </span>
+          </Card>
           <div className="flex items-start justify-start gap-4 flex-col">
             <h1 className="font-extrabold text-2xl">{BUSINESS_NAME}</h1>
             {contactInfo.map((info) => (
@@ -79,7 +80,7 @@ const ContactPage = () => {
               </section>
             ))}
           </div>
-          <div className="col-span-full">
+          <Card className="col-span-full shadow-md">
             <iframe
               title="map"
               src={MAP_IFRAME}
@@ -89,7 +90,7 @@ const ContactPage = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>
+          </Card>
         </div>
       </div>
     </main>
