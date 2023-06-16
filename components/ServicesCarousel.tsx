@@ -10,11 +10,11 @@ const ServicesCarousel = () => {
     <span>
       <SectionTitle title="ΟΛΙΣΤΙΚΕΣ ΘΕΡΑΠΕΙΕΣ" />
       <section className="w-full flex flex-col items-center justify-center">
-        <Card className="relative xl:w-2/4 md:w-3/4 p-5 max-w-full ">
+        <Card className="relative xl:w-2/4 md:w-3/4 max-w-full p-5">
           <CarouseButtons scrollableDivId="scrollable-div" />
           <div
             id="scrollable-div"
-            className="flex overflow-x-hidden gap-4 justify-between p-2"
+            className="flex overflow-x-auto gap-4 justify-between p-2"
           >
             {servicesInfo.map((service) => (
               <Link

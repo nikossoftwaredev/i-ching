@@ -29,3 +29,9 @@ body {
 .animate-pulse-scale {
   animation: pulse-scale 2s ease-in-out infinite;
 }
+
+/* Hide the scrollbar for WebKit-based browsers */
+#scrollable-div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
