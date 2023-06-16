@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import CarouseButtons from "@/components/CarouselButtons";
 import SectionTitle from "@/components/SectionTitle";
 import { servicesInfo } from "@/data/services";
 import Link from "next/link";
@@ -9,8 +10,12 @@ const ServicesCarousel = () => {
     <span>
       <SectionTitle title="ΟΛΙΣΤΙΚΕΣ ΘΕΡΑΠΕΙΕΣ" />
       <section className="w-full flex flex-col items-center justify-center">
-        <Card className="xl:w-2/4 md:w-3/4 p-5 max-w-full ">
-          <div className="flex overflow-x-auto gap-4 justify-between p-2">
+        <Card className="relative xl:w-2/4 md:w-3/4 p-5 max-w-full ">
+          <CarouseButtons scrollableDivId="scrollable-div" />
+          <div
+            id="scrollable-div"
+            className="flex overflow-x-hidden gap-4 justify-between p-2"
+          >
             {servicesInfo.map((service) => (
               <Link
                 href={`/wiki/${service.serviceId}`}
