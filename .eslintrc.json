@@ -4,7 +4,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier"
+    "eslint-config-prettier" // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
   ],
   "plugins": ["react", "react-hooks", "eslint-plugin-no-relative-import-paths"],
   "rules": {

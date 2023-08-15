@@ -1,7 +1,4 @@
-
-
 [live here](https://ichingbalance.gr/en)
-
 
 [cloning this site](https://design1.doctorsitecare.com/)
 
