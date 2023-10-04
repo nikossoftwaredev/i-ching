@@ -14,9 +14,8 @@ const footerSections = [
     title: "Ωράριο λειτουργίας",
     subtitles: [
       { icon: <MdOutlineCalendarToday />, value: "Δευτέρα - Παρασκευή" },
-      { icon: <MdAccessTime />, value: "13:00 - 16:30" },
-      { icon: <MdOutlineCalendarToday />, value: "Σάββατο - Κυριακή" },
-      { icon: <MdAccessTime />, value: "12:00 - 20:00" },
+      { icon: <MdAccessTime />, value: "10:00 - 14:00" },
+      { icon: <MdAccessTime />, value: "17:00 - 20:00" },
     ],
   },
   {
