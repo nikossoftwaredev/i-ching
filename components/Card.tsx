@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { HTMLAttributes, ReactNode } from "react";
+import { FC, HTMLAttributes } from "react";
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode;
   loading?: boolean;
   variant?: "primary" | "secondary" | "default" | "transparent";
 }
 
-const Card = (props: CardProps) => {
+const Card: FC<CardProps> = (props) => {
   const { className, children } = props;
 
   return (

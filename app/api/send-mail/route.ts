@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server';
 import { formatDate } from '@/utils/date';
-import { sendViberMessage } from '@/app/api/viber-webhook/route';
-
-
-
+import { sendViberMessage } from '@/utils/viber';
 
 const getFormattedText = (formData: any) => {
   const formattedText = Object.keys(formData)

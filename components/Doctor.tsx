@@ -1,7 +1,8 @@
 import AppLink from "@/components/AppLink";
 import Card from "@/components/Card";
+import { FC } from "react";
 
-const Doctor = () => (
+const Doctor: FC<void> = () => (
   <section className="w-full flex flex-col items-center justify-center">
     <Card className="p-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-4 w-full md:max-w-xl">
       <figure className="flex flex-col items-center justify-center">

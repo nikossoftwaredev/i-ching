@@ -1,9 +1,9 @@
 import Link, { LinkProps } from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
 type AppLinkProps = LinkProps & React.HTMLAttributes<HTMLAnchorElement>;
 
-const AppLink = (props: AppLinkProps): JSX.Element => {
+const AppLink: FC<AppLinkProps> = (props) => {
   return (
     <Link
       {...props}
