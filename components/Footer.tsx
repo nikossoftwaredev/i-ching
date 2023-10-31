@@ -1,6 +1,5 @@
 import AppLink from "@/components/AppLink";
 import { ADDRESS, DOMAIN, MAIL, PHONE } from "data/general";
-import Link from "next/link";
 import {
   MdMailOutline,
   MdOutlineCalendarToday,

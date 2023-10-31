@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   title: BUSINESS_NAME,
   description,
   keywords,
-  viewport: "width=device-width, initial-scale=1",
   applicationName: BUSINESS_NAME,
   robots: "index, follow",
   openGraph: {
