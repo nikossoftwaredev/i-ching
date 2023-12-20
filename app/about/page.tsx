@@ -1,4 +1,4 @@
-import Doctor from "@/components/Doctor";
+import Doctor from "@/components/about/AboutSection";
 
 const Curriculum = () => {
   return (

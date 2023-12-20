@@ -1,10 +1,10 @@
-import Doctor from "@/components/Doctor";
-import SectionTitle from "@/components/SectionTitle";
-import ServicesCarousel from "@/components/ServicesCarousel";
+import ServicesSection from "@/components/services/ServicesSection";
 import { BUSINESS_NAME, LAST_NAME, NAME } from "@/data/general";
 import { servicesInfo } from "@/data/services";
-import About from "components/About";
 import { Metadata } from "next";
+import ContactSection from "@/components/contact/ContactSection";
+import AboutSection from "@/components/about/AboutSection";
+import HomeSection from "@/components/home/HomeSection";
 
 const staticKeywords = [
   "πόνος στην πλάτη",
@@ -42,10 +42,9 @@ const Home = () => {
   return (
     <section>
       <div className="w-full flex flex-col gap-4 pt-4">
-        <About />
-        <ServicesCarousel />
-        <SectionTitle title="Η ΘΕΡΑΠΕΥΤΡΙΑ" />
-        <Doctor />
+        <AboutSection />
+        <ServicesSection />
+        <ContactSection />
       </div>
     </section>
   );

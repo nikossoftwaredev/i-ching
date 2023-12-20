@@ -5,10 +5,10 @@ import { servicesInfo } from "@/data/services";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
-const ServicesCarousel = () => {
+const ServicesSection = () => {
   return (
-    <span>
-      <SectionTitle title="ΟΛΙΣΤΙΚΕΣ ΘΕΡΑΠΕΙΕΣ" />
+    <span id="#services-section">
+      <SectionTitle title="ΥΠΗΡΕΣΙΕΣ" />
       <section className="w-full flex flex-col items-center justify-center">
         <Card className="relative xl:w-2/4 md:w-3/4 max-w-full p-5">
           <CarouseButtons scrollableDivId="scrollable-div" />
@@ -41,4 +41,4 @@ const ServicesCarousel = () => {
   );
 };
 
-export default ServicesCarousel;
+export default ServicesSection;
