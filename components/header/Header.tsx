@@ -35,15 +35,19 @@ const Header = () => {
             ))}
           </div>
           <ul className="w-full flex flex-row gap-6 justify-center items-center mr-1">
-            <Link href="/" className="flex items-center animate-pulse-scale">
+            <Link
+              href="/"
+              className="flex items-center animate-pulse-scale mr-10"
+            >
               <img
                 src="/images/logo.png"
                 alt="Flowbite Logo"
                 className="w-[60px] h-[60px]"
               />
             </Link>
-            {headerLinks.map((linkConfig) => {
+            {headerLinks.map((linkConfig, idx) => {
               let isActive = pathname === linkConfig.path;
+              const isLastEl = idx === headerLinks.length - 1;
 
               if (linkConfig.path !== "/" && pathname) {
                 isActive = pathname === linkConfig.path;
@@ -51,14 +55,14 @@ const Header = () => {
 
               return (
                 <li key={linkConfig.path}>
-                  <Link
+                  <a
                     href={linkConfig.path}
                     className={`font-bold hover:text-accent ${
                       isActive ? "text-accent" : ""
-                    }`}
+                    } ${isLastEl ? "mr-10" : ""}`}
                   >
                     {linkConfig.text}
-                  </Link>
+                  </a>
                 </li>
               );
             })}

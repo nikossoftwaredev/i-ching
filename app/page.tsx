@@ -4,7 +4,6 @@ import { servicesInfo } from "@/data/services";
 import { Metadata } from "next";
 import ContactSection from "@/components/contact/ContactSection";
 import AboutSection from "@/components/about/AboutSection";
-import HomeSection from "@/components/home/HomeSection";
 
 const staticKeywords = [
   "πόνος στην πλάτη",
@@ -21,7 +20,7 @@ const description =
 
 const keywords = staticKeywords
   .concat(
-    servicesInfo.map((service) => `${service.title}: ${service.subtitle}`)
+    servicesInfo.map((service) => `${service.title}: ${service.description}`)
   )
   .join(", ");
 

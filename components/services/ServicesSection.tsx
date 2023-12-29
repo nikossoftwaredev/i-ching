@@ -1,13 +1,13 @@
 import Card from "@/components/Card";
 import CarouseButtons from "@/components/CarouselButtons";
+import Chip from "@/components/Chip";
 import SectionTitle from "@/components/SectionTitle";
 import { servicesInfo } from "@/data/services";
 import Link from "next/link";
-import { MdArrowForward } from "react-icons/md";
 
 const ServicesSection = () => {
   return (
-    <span id="#services-section">
+    <div id="services-section">
       <SectionTitle title="ΥΠΗΡΕΣΙΕΣ" />
       <section className="w-full flex flex-col items-center justify-center">
         <Card className="relative xl:w-2/4 md:w-3/4 max-w-full p-5">
@@ -16,28 +16,32 @@ const ServicesSection = () => {
             id="scrollable-div"
             className="flex overflow-x-auto gap-4 justify-between p-2"
           >
-            {servicesInfo.map((service) => (
+            {servicesInfo.map(({ serviceId, title, image, tags }) => (
               <Link
-                href={`/wiki/${service.serviceId}`}
-                key={service.serviceId}
-                className="overflow-y-hidden rounded-lg shadow-xl relative h-[300px] w-[250px]  flex flex-col flex-shrink-0 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
+                href={`/wiki/${serviceId}`}
+                key={serviceId}
+                className="overflow-y-hidden rounded-lg shadow-xl relative h-[500px] w-[400px] grid grid-flow-row grid-rows-5 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
               >
+                <div className="rounded-t-lg grow bg-white flex flex-row justify-center items-center p-2 font-bold text-2xl text-accent-focus gap-2">
+                  <h2 className="text-center ">{title}</h2>
+                </div>
                 <img
-                  src={service.image}
-                  className="rounded-t-lg object-cover h-4/5 w-full"
-                  alt={service.title}
+                  src={image}
+                  className="object-cover row-span-4 w-full h-full"
+                  alt={title}
                   loading="lazy"
                 />
-                <div className="rounded-b-lg grow bg-white flex flex-row justify-center items-center p-2 font-bold text-2xl text-accent-focus gap-2">
-                  <h2 className="text-center ">{service.title}</h2>
-                  <MdArrowForward />
+                <div className="absolute p-2 bottom-0 rounded-b-lg flex gap-2 flex-wrap">
+                  {tags.map((tag) => (
+                    <Chip key={tag} text={tag} />
+                  ))}
                 </div>
               </Link>
             ))}
           </div>
         </Card>
       </section>
-    </span>
+    </div>
   );
 };
 

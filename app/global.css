@@ -5,12 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Mynerve, Roboto, Oxygen, sans-serif;
-  scroll-behavior: smooth;
   background: whitesmoke;
 }
 
