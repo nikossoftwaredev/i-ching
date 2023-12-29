@@ -1,6 +1,10 @@
 export const PHONE = '6983384847';
 export const ΙΝSTAGRAM = 'i_ching_balance_way';
 export const INSTAGRAM_URL = 'https://www.instagram.com/i_ching_balance_way/';
+export const TIKTOK = '@iching_balanceway';
+export const TIKTOK_URL = 'https://www.tiktok.com/@iching_balanceway?_t=8febf4pBMqO&_r=1';
+export const FACEBOOK = 'i.ching.balance.way';
+export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100093141055922';
 export const ADDRESS = 'Νίκης 61, Άλιμος';
 export const MAIL = 'iching.balanceway@gmail.com';
 export const DOMAIN = 'ichingbalance.gr';

@@ -12,45 +12,6 @@ import SectionTitle from "components/SectionTitle";
 import Link from "next/link";
 import Card from "@/components/Card";
 
-const contactInfo = [
-  {
-    icon: (
-      <Link href={NAVIGATION} target="_blank">
-        <MdLocationPin
-          className="text-bg-primary-content hover:text-black"
-          size={70}
-        />
-      </Link>
-    ),
-    title: "Διεύθνση",
-    value: ADDRESS,
-  },
-  {
-    icon: (
-      <Link href={`tel:${PHONE}`}>
-        <MdOutlinePhone
-          className="text-bg-primary-content hover:text-black"
-          size={70}
-        />
-      </Link>
-    ),
-    title: "Τηλέφωνο",
-    value: PHONE,
-  },
-  {
-    icon: (
-      <Link href={`mailto:${MAIL}`}>
-        <MdMailOutline
-          className="text-bg-primary-content hover:text-black"
-          size={70}
-        />
-      </Link>
-    ),
-    title: "Email",
-    value: MAIL,
-  },
-];
-
 const ContactPage = () => {
   return (
     <main className="flex items-center justify-center p-4">
