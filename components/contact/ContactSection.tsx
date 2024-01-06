@@ -2,13 +2,11 @@ import SectionTitle from "@/components/SectionTitle";
 
 import {
   ADDRESS,
-  BUSINESS_NAME,
   FACEBOOK,
   FACEBOOK_URL,
   INSTAGRAM_URL,
   ΙΝSTAGRAM,
   MAIL,
-  MAP_IFRAME,
   NAVIGATION,
   PHONE,
   TIKTOK_URL,
@@ -18,7 +16,7 @@ import { cloneElement } from "react";
 import { MdMailOutline, MdOutlinePhone, MdLocationPin } from "react-icons/md";
 import { SiTiktok, SiFacebook, SiInstagram } from "react-icons/si";
 import Link from "next/link";
-import Card from "@/components/Card";
+import MapSection from "@/components/map/MapSection";
 
 interface ContactInfo {
   href: string;
@@ -123,20 +121,7 @@ const ContactSection = () => {
           ))}
         </div>
       </div>
-      <SectionTitle title="ΧΑΡΤΗΣ" />
-      <div className="w-full flex items-center justify-center">
-        <Card className="sm:w-full md:w-3/4 shadow-md mt-4 flex items-center justify-center">
-          <iframe
-            title="map"
-            src={MAP_IFRAME}
-            className="rounded-lg border-hidden "
-            width="100%"
-            height="400px"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </Card>
-      </div>
+      <MapSection />
     </span>
   );
 };

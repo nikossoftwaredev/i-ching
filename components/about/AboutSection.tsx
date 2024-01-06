@@ -1,4 +1,3 @@
-import AppLink from "@/components/AppLink";
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import { FC } from "react";
