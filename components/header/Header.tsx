@@ -22,7 +22,7 @@ const Header = () => {
           <MobileHeader />
         </span>
         <span className="hidden md:block">
-          <div className="flex flex-wrap justify-center items-center  w-full mb-4 bg-base-300 gap-7  py-3 pr-1">
+          <div className="flex flex-wrap justify-center items-center  w-full mb-4 bg-base-200 gap-7  py-3 pr-1">
             {headerInfo.map(({ href, icon, text }) => (
               <Link
                 className="text-md flex gap-2 items-center"

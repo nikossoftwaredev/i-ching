@@ -30,7 +30,7 @@ const footerSections = [
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className="bg-base-300 flex items-center flex-col py-10">
+    <footer className="bg-base-200 flex items-center flex-col py-10">
       <div className="flex justify-center items-start gap-20 pb-5  sm:flex-col md:flex-row flex-wrap">
         {footerSections.map((footerSection) => (
           <section key={footerSection.title}>
