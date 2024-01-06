@@ -19,7 +19,7 @@ const footerSections = [
   },
   {
     title: "Επικοινωνία",
-    link: "/contact",
+    link: "#contact-section",
     subtitles: [
       { icon: <MdLocationPin />, value: ADDRESS },
       { icon: <MdOutlinePhone />, value: PHONE },

@@ -7,7 +7,7 @@ import { PageProps } from "types/general";
 
 const RootLayout = async ({ children }: PageProps): Promise<JSX.Element> => {
   return (
-    <html lang="el" data-theme="retro">
+    <html lang="el" data-theme="light">
       <body className="text-base-content">
         <Header />
         <main className="bg-base-100 px-4">
