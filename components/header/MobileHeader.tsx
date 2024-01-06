@@ -12,7 +12,7 @@ const MobileHeader = () => {
     <div className="flex items-center justify-between pt-2">
       <Link href="/" className="animate-pulse-scale pl-2">
         <img
-          src="/images/logo.png"
+          src="/images/logo.svg"
           alt="Flowbite Logo"
           className="w-[60px] h-[60px]"
         />

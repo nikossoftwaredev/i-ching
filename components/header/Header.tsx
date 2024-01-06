@@ -40,9 +40,9 @@ const Header = () => {
               className="flex items-center animate-pulse-scale mr-10"
             >
               <img
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="Flowbite Logo"
-                className="w-[60px] h-[60px]"
+                className="w-[70px] h-[70px]"
               />
             </Link>
             {headerLinks.map((linkConfig, idx) => {

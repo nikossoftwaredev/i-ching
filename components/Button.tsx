@@ -15,13 +15,8 @@ const Button = (props: ButtonProps) => {
     loading = false,
     variant,
     outlined = true,
+    ...buttonPros
   } = props;
-  const buttonPros = { ...props };
-  delete buttonPros.loading;
-  delete buttonPros.variant;
-  delete buttonPros.outlined;
-  delete buttonPros.className;
-  delete buttonPros.children;
 
   return (
     <button
