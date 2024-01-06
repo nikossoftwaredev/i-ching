@@ -15,7 +15,7 @@ const ServicesSection = () => {
             className="shadow-xl relative h-[400px] w-[300px]  grid grid-flow-row grid-rows-5 brightness-100 hover:brightness-75 transition ease-in-out duration-300"
           >
             <div className="rounded-t-lg grow bg-white flex flex-row justify-center items-center p-2 font-bold text-2xl ">
-              <h2 className="text-center ">{title}</h2>
+              <h2 className="text-center text-accent">{title}</h2>
             </div>
             <img
               src={image}
