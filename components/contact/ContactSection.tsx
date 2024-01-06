@@ -20,7 +20,14 @@ import { SiTiktok, SiFacebook, SiInstagram } from "react-icons/si";
 import Link from "next/link";
 import Card from "@/components/Card";
 
-const contactInfo = [
+interface ContactInfo {
+  href: string;
+  icon: JSX.Element;
+  title: string;
+  value: string;
+}
+
+const contactInfo: ContactInfo[] = [
   {
     href: NAVIGATION,
     icon: (
@@ -56,7 +63,7 @@ const contactInfo = [
   },
 ];
 
-const socialInfo = [
+const socialInfo: ContactInfo[] = [
   {
     href: INSTAGRAM_URL,
     icon: (
@@ -92,48 +99,33 @@ const socialInfo = [
   },
 ];
 
+const ContactIcon = ({ href, icon, title, value }: ContactInfo) => {
+  return (
+    <Link target="_blank" href={href} key={title} className="flex gap-4">
+      {cloneElement(icon)}
+      <span className="flex flex-col gap-2">
+        <p className="font-extrabold">{title}</p>
+        <p> {value}</p>
+      </span>
+    </Link>
+  );
+};
+
 const ContactSection = () => {
   // Take the id and the title from a config
   return (
     <span id="contact-section">
       <SectionTitle title="ΕΠΙΚΟΙΝΩΝΙΑ" />
-      <div className="w-full flex items-center justify-center gap-8">
-        <div className="flex flex-col items-start justify-start gap-4">
-          {socialInfo.map((info) => (
-            <Link
-              target="_blank"
-              href={info.href}
-              key={info.title}
-              className="flex items-center justify-center gap-4"
-            >
-              {cloneElement(info.icon)}
-              <span className="flex flex-col gap-2">
-                <p className="font-extrabold">{info.title}</p>
-                <p> {info.value}</p>
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex flex-col items-start justify-start gap-4">
-          {contactInfo.map((info) => (
-            <Link
-              href={info.href}
-              key={info.title}
-              className="flex items-center justify-center gap-4"
-            >
-              {cloneElement(info.icon)}
-              <span className="flex flex-col gap-2">
-                <p className="font-extrabold">{info.title}</p>
-                <p> {info.value}</p>
-              </span>
-            </Link>
+      <div className="w-full flex flex-col items-center justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
+          {[...socialInfo, ...contactInfo].map((info) => (
+            <ContactIcon key={info.value} {...info} />
           ))}
         </div>
       </div>
       <SectionTitle title="ΧΑΡΤΗΣ" />
-      <div className=" w-full flex items-center justify-center">
-        <Card className="w-3/4 shadow-md mt-4 flex items-center justify-center">
+      <div className="w-full flex items-center justify-center">
+        <Card className="sm:w-full md:w-3/4 shadow-md mt-4 flex items-center justify-center">
           <iframe
             title="map"
             src={MAP_IFRAME}
