@@ -17,12 +17,12 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="bg-base-100">
+      <nav>
         <span className="md:hidden">
           <MobileHeader />
         </span>
         <span className="hidden md:block">
-          <div className="flex flex-wrap justify-center items-center  w-full mb-4 bg-base-200 gap-7  py-3 pr-1">
+          <div className="flex flex-wrap justify-center items-center  w-full gap-7  py-3 pr-1">
             {headerInfo.map(({ href, icon, text }) => (
               <Link
                 className="text-md flex gap-2 items-center"
@@ -34,7 +34,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <ul className="w-full flex flex-row gap-6 justify-center items-center mr-1">
+          <ul className="p-2 w-full flex flex-row gap-6 justify-center items-center mr-1">
             <Link
               href="/"
               className="flex items-center animate-pulse-scale mr-10"
@@ -57,7 +57,7 @@ const Header = () => {
                 <li key={linkConfig.path}>
                   <a
                     href={linkConfig.path}
-                    className={`font-bold hover:text-accent ${
+                    className={`text-primary font-bold hover:text-accent ${
                       isActive ? "text-accent" : ""
                     } ${isLastEl ? "mr-10" : ""}`}
                   >

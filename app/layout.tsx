@@ -8,9 +8,9 @@ import { PageProps } from "types/general";
 const RootLayout = async ({ children }: PageProps): Promise<JSX.Element> => {
   return (
     <html lang="el" data-theme="light">
-      <body className="text-base-content">
+      <body className="text-base-content bg-gradient-to-b from-slate-100 to-base-100  to-10%">
         <Header />
-        <main className="bg-base-100 px-4">
+        <main className="px-4">
           {children}
           <AppointmentForm />
         </main>
