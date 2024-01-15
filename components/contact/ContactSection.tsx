@@ -17,85 +17,11 @@ import { MdMailOutline, MdOutlinePhone, MdLocationPin } from "react-icons/md";
 import { SiTiktok, SiFacebook, SiInstagram } from "react-icons/si";
 import Link from "next/link";
 import MapSection from "@/components/map/MapSection";
-
-interface ContactInfo {
-  href: string;
-  icon: JSX.Element;
-  title: string;
-  value: string;
-}
-
-const contactInfo: ContactInfo[] = [
-  {
-    href: NAVIGATION,
-    icon: (
-      <MdLocationPin
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Διεύθνση",
-    value: ADDRESS,
-  },
-  {
-    href: `tel:${PHONE}`,
-    icon: (
-      <MdOutlinePhone
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Τηλέφωνο",
-    value: PHONE,
-  },
-  {
-    href: `mailto:${MAIL}`,
-    icon: (
-      <MdMailOutline
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Email",
-    value: MAIL,
-  },
-];
-
-const socialInfo: ContactInfo[] = [
-  {
-    href: INSTAGRAM_URL,
-    icon: (
-      <SiInstagram
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Instagram",
-    value: ΙΝSTAGRAM,
-  },
-  {
-    href: FACEBOOK_URL,
-    icon: (
-      <SiFacebook
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Facebook",
-    value: FACEBOOK,
-  },
-  {
-    href: TIKTOK_URL,
-    icon: (
-      <SiTiktok
-        className="text-bg-primary-content hover:text-black"
-        size={70}
-      />
-    ),
-    title: "Tik Tok",
-    value: TIKTOK,
-  },
-];
+import {
+  ContactInfo,
+  contactInfo,
+  socialInfo,
+} from "@/components/header/headerConfig";
 
 const ContactIcon = ({ href, icon, title, value }: ContactInfo) => {
   return (

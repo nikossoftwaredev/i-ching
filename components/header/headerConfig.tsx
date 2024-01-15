@@ -1,13 +1,17 @@
-import { MdMail, MdPhone, MdLocationPin } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
 import {
   ADDRESS,
+  FACEBOOK,
+  FACEBOOK_URL,
   INSTAGRAM_URL,
+  ΙΝSTAGRAM,
   MAIL,
   NAVIGATION,
   PHONE,
-  ΙΝSTAGRAM,
+  TIKTOK_URL,
+  TIKTOK,
 } from "data/general";
+import { SiTiktok, SiFacebook, SiInstagram } from "react-icons/si";
+import { MdMailOutline, MdOutlinePhone, MdLocationPin } from "react-icons/md";
 
 export const headerLinks = [
   { path: "/#home", text: "Αρχική" },
@@ -16,9 +20,81 @@ export const headerLinks = [
   { path: `/#contact-section`, text: "Επικοινωνία" },
 ];
 
-export const headerInfo = [
-  { href: INSTAGRAM_URL, icon: <BsInstagram size={30} />, text: ΙΝSTAGRAM },
-  { href: `tel:${PHONE}`, icon: <MdPhone size={30} />, text: PHONE },
-  { href: `mailto:${MAIL}`, icon: <MdMail size={30} />, text: MAIL },
-  { href: NAVIGATION, icon: <MdLocationPin size={30} />, text: ADDRESS },
+export interface ContactInfo {
+  href: string;
+  icon: JSX.Element;
+  title: string;
+  value: string;
+}
+
+export const contactInfo: ContactInfo[] = [
+  {
+    href: NAVIGATION,
+    icon: (
+      <MdLocationPin
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Διεύθνση",
+    value: ADDRESS,
+  },
+  {
+    href: `tel:${PHONE}`,
+    icon: (
+      <MdOutlinePhone
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Τηλέφωνο",
+    value: PHONE,
+  },
+  {
+    href: `mailto:${MAIL}`,
+    icon: (
+      <MdMailOutline
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Email",
+    value: MAIL,
+  },
+];
+
+export const socialInfo: ContactInfo[] = [
+  {
+    href: INSTAGRAM_URL,
+    icon: (
+      <SiInstagram
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Instagram",
+    value: ΙΝSTAGRAM,
+  },
+  {
+    href: FACEBOOK_URL,
+    icon: (
+      <SiFacebook
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Facebook",
+    value: FACEBOOK,
+  },
+  {
+    href: TIKTOK_URL,
+    icon: (
+      <SiTiktok
+        className="text-bg-primary-content hover:text-black"
+        size={70}
+      />
+    ),
+    title: "Tik Tok",
+    value: TIKTOK,
+  },
 ];

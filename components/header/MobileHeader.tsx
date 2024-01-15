@@ -4,7 +4,11 @@ import Link from "next/link";
 import AppointmentScroll from "@/components/header/AppointmentScroll";
 import AppLink from "@/components/AppLink";
 import Button from "@/components/Button";
-import { headerInfo, headerLinks } from "@/components/header/headerConfig";
+import {
+  contactInfo,
+  headerLinks,
+  socialInfo,
+} from "@/components/header/headerConfig";
 import SectionTitle from "@/components/SectionTitle";
 
 const MobileHeader = () => {
@@ -44,14 +48,14 @@ const MobileHeader = () => {
           ))}
           <SectionTitle title="ΠΛΗΡΟΦΟΡΙΕΣ" />
           <section className="flex flex-col gap-3 center">
-            {headerInfo.map(({ href, icon, text }) => (
+            {[...socialInfo, ...contactInfo].map(({ href, icon, value }) => (
               <Link
                 className="text-md flex gap-3 items-center"
                 href={href}
                 key={href}
               >
                 {icon}
-                <span className="">{text}</span>
+                <span className="">{value}</span>
               </Link>
             ))}
           </section>

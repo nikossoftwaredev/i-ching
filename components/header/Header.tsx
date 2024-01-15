@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import MobileHeader from "@/components/header/MobileHeader";
 import AppointmentScroll from "@/components/header/AppointmentScroll";
-import { headerInfo, headerLinks } from "@/components/header/headerConfig";
+import { contactInfo, headerLinks } from "@/components/header/headerConfig";
 
 const Header = () => {
   const pathname = usePathname();
@@ -23,14 +23,14 @@ const Header = () => {
         </span>
         <span className="hidden md:block">
           <div className="flex flex-wrap justify-center items-center  w-full gap-7  py-3 pr-1">
-            {headerInfo.map(({ href, icon, text }) => (
+            {contactInfo.map(({ href, icon, value }) => (
               <Link
                 className="text-md flex gap-2 items-center"
                 href={href}
                 key={href}
               >
                 {icon}
-                {text}
+                {value}
               </Link>
             ))}
           </div>
