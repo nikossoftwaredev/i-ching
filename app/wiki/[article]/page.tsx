@@ -49,23 +49,6 @@ const Page = ({ params }: PageProps) => {
   return (
     <div>
       <section className="w-full flex flex-col items-center justify-center">
-        <div className="flex w-full items-center justify-center gap-2 my-2">
-          <ButtonLink
-            href={`/scientific-articles/${findPreviousArticlePath(
-              articleInfoIndex
-            )}`}
-          >
-            Προηγουμενο
-          </ButtonLink>
-          <ButtonLink
-            href={`/scientific-articles/${findNextArticlePath(
-              articleInfoIndex
-            )}`}
-            variant="accent"
-          >
-            Επομενο
-          </ButtonLink>
-        </div>
         <h1 className="text-2xl font-bold uppercase">{title}</h1>
         {contents.map((content) => (
           <Card

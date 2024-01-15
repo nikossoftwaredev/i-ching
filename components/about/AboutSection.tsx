@@ -10,9 +10,14 @@ const AboutCard: FC<{ href: string; children: React.ReactNode }> = ({
   <Card className="grid grid-cols-1 lg:grid-cols-2 justify-center md:w-3/4 p-4 leading-8 text-lg font-medium">
     {children}
     <p></p>
-    <AppLink className="ml-auto btn btn-outline" href={href}>
+    <a
+      className="ml-auto btn btn-outline"
+      href={href}
+      target={href.startsWith("/") ? "_self" : "_blank"}
+      rel="noreferrer"
+    >
       ΠΕΡΙΣΣΟΤΕΡΑ
-    </AppLink>
+    </a>
   </Card>
 );
 
@@ -48,7 +53,7 @@ const AboutSection: FC<{ [key: string]: any }> = () => (
         </div>
       </div>
     </AboutCard>
-    <AboutCard href="/wiki/katerina-dimitrakopoulou">
+    <AboutCard href="https://en.wikipedia.org/wiki/I_Ching">
       <figure className="flex flex-col items-center justify-center">
         <img
           src="/images/main_area.webp"
@@ -67,7 +72,7 @@ const AboutSection: FC<{ [key: string]: any }> = () => (
         άλλων.
       </p>
     </AboutCard>
-    <AboutCard href="/wiki/katerina-dimitrakopoulou">
+    <AboutCard href="https://eski.gr/history-of-chinese-medicine-tcm/?fbclid=IwAR1eMMW9AsYvUuBJwQkGgKyP1zNbzXY_utgdpgFb0xkNEbLapyQpE8Qnovs">
       <figure className="flex flex-col items-center justify-center">
         <img
           src="/images/holistic.jpg"

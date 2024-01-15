@@ -62,7 +62,10 @@ const Footer = (): JSX.Element => {
         Με την επιφύλαξη παντός δικαιώματος.
         <br />
         Made by
-        <AppLink href="https://www.linkedin.com/in/nikosdim97/">
+        <AppLink
+          className="text-primary"
+          href="https://www.linkedin.com/in/nikosdim97/"
+        >
           &nbsp; Nikos Dimitrakopoulos&nbsp;
         </AppLink>
       </section>
