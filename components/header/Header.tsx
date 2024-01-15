@@ -37,7 +37,7 @@ const Header = () => {
           <ul className="p-2 w-full flex flex-row gap-6 justify-center items-center mr-1">
             <Link
               href="/"
-              className="flex items-center animate-pulse-scale mr-10"
+              className="bg-slate-100 p-4 flex items-center animate-pulse-scale mr-10 rounded-full"
             >
               <img
                 src="/images/logo.svg"
@@ -57,8 +57,8 @@ const Header = () => {
                 <li key={linkConfig.path}>
                   <a
                     href={linkConfig.path}
-                    className={`text-primary font-bold hover:text-accent ${
-                      isActive ? "text-accent" : ""
+                    className={`font-bold hover:text-base-300 ${
+                      isActive ? "text-base-300" : ""
                     } ${isLastEl ? "mr-10" : ""}`}
                   >
                     {linkConfig.text}

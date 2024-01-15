@@ -8,7 +8,7 @@ import { PageProps } from "types/general";
 const RootLayout = async ({ children }: PageProps): Promise<JSX.Element> => {
   return (
     <html lang="el" data-theme="light">
-      <body className="text-base-content bg-gradient-to-b from-slate-100 to-base-100  to-10%">
+      <body className="text-base-content bg-gradient-to-b to-25% from-primary to-base-300 ">
         <Header />
         <main className="px-4">
           {children}

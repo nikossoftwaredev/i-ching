@@ -1,14 +1,16 @@
 import AppLink from "@/components/AppLink";
-import Button from "@/components/Button";
 import Card from "@/components/Card";
 import SectionTitle from "@/components/SectionTitle";
 import { FC } from "react";
 
-const AboutCard: FC<{ [key: string]: any }> = ({ children }) => (
+const AboutCard: FC<{ href: string; children: React.ReactNode }> = ({
+  href,
+  children,
+}) => (
   <Card className="grid grid-cols-1 lg:grid-cols-2 justify-center md:w-3/4 p-4 leading-8 text-lg font-medium">
     {children}
     <p></p>
-    <AppLink className="ml-auto btn btn-outline" href={"/contact"}>
+    <AppLink className="ml-auto btn btn-outline" href={href}>
       ΠΕΡΙΣΣΟΤΕΡΑ
     </AppLink>
   </Card>
@@ -21,13 +23,12 @@ const AboutSection: FC<{ [key: string]: any }> = () => (
   >
     <SectionTitle title="ΓΝΩΡΙΣΤΕ ΜΑΣ" />
 
-    <AboutCard>
+    <AboutCard href="/resume">
       <figure className="flex flex-col items-center justify-center">
         <img
           src="/images/doctor.webp"
           alt="katerina-dimitrakopoulou"
-          className="rounded-xl object-cover"
-          height={300}
+          className="h-[300px] w-[300px] rounded-xl object-cover"
           loading="lazy"
         />
       </figure>
@@ -47,12 +48,12 @@ const AboutSection: FC<{ [key: string]: any }> = () => (
         </div>
       </div>
     </AboutCard>
-    <AboutCard>
+    <AboutCard href="/wiki/katerina-dimitrakopoulou">
       <figure className="flex flex-col items-center justify-center">
         <img
           src="/images/main_area.webp"
           alt="main-area"
-          className="rounded-xl object-cover"
+          className="h-[300px] w-[300px] rounded-xl object-cover"
           loading="lazy"
         />
       </figure>
@@ -64,6 +65,29 @@ const AboutSection: FC<{ [key: string]: any }> = () => (
         κύκλο τους, αλλά προχωρούν μπροστά, και πως κάποιος χρειάζεται προσωπική
         ισορροπία για να μπορέσει να &quot;διορθώσει&quot; τις ανισορροπίες των
         άλλων.
+      </p>
+    </AboutCard>
+    <AboutCard href="/wiki/katerina-dimitrakopoulou">
+      <figure className="flex flex-col items-center justify-center">
+        <img
+          src="/images/holistic.jpg"
+          alt="main-area"
+          className="h-[300px] w-[300px] rounded-xl object-cover"
+          loading="lazy"
+        />
+      </figure>
+      <p className="p-3">
+        Η Κινέζικη Ιατρική είναι ένα σύστημα διαχείρισης της υγείας και της
+        ασθένειας, με ρίζες που χάνονται στην αρχή της ιστορίας της
+        ανθρωπότητας, και με τα αρχαιότερά της συγγράμματα να τοποθετούνται
+        ιστορικά 2500 χρόνια πριν. Αναπτύχθηκε αρχικά και εξελίχθηκε στην
+        διάρκεια των αιώνων, άρρηκτα συνδεδεμένη με την κουλτούρα, τον
+        πολιτισμό, και την ιστορία ενός λαού που αναμετρήθηκε με το δικό του
+        διαφορετικό τρόπο με τα πανανθρώπινα ερωτήματα για την προέλευση της
+        ζωής και του σύμπαντος, για το νόημα της ύπαρξης και του θανάτου, για τη
+        σχέση του ανθρώπου με το περιβάλλον του, συνθέτοντας μια κοσμοθεωρία που
+        τροφοδότησε μια οργανωμένη απάντηση στο τι είναι η υγεία και πώς
+        μπορούμε να τη διατηρήσουμε.
       </p>
     </AboutCard>
   </section>
