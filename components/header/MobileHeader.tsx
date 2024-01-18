@@ -14,7 +14,10 @@ import SectionTitle from "@/components/SectionTitle";
 const MobileHeader = () => {
   return (
     <div className="flex items-center justify-between pt-2">
-      <Link href="/" className="animate-pulse-scale pl-2">
+      <Link
+        href="/"
+        className="bg-slate-50 pl-2 flex items-center animate-pulse-scale rounded-full"
+      >
         <img
           src="/images/logo.svg"
           alt="Flowbite Logo"

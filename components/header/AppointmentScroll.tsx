@@ -13,7 +13,7 @@ const AppointmentScroll = () => {
 
   return (
     <Button className="animate-pulse-scale" onClick={scrollToAppointment}>
-      Κλεισε Ραντεβου
+      Κλείσε Ραντεβού
     </Button>
   );
 };

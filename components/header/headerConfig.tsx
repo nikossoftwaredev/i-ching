@@ -33,7 +33,7 @@ export const contactInfo: ContactInfo[] = [
     icon: (
       <MdLocationPin
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Διεύθνση",
@@ -44,7 +44,7 @@ export const contactInfo: ContactInfo[] = [
     icon: (
       <MdOutlinePhone
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Τηλέφωνο",
@@ -55,7 +55,7 @@ export const contactInfo: ContactInfo[] = [
     icon: (
       <MdMailOutline
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Email",
@@ -69,7 +69,7 @@ export const socialInfo: ContactInfo[] = [
     icon: (
       <SiInstagram
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Instagram",
@@ -80,7 +80,7 @@ export const socialInfo: ContactInfo[] = [
     icon: (
       <SiFacebook
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Facebook",
@@ -91,7 +91,7 @@ export const socialInfo: ContactInfo[] = [
     icon: (
       <SiTiktok
         className="text-bg-primary-content hover:text-black"
-        size={70}
+        size={40}
       />
     ),
     title: "Tik Tok",
