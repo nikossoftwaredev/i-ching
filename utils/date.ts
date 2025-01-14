@@ -1,5 +1,5 @@
-import { START_YEAR } from 'data/general';
 import dayjs from 'dayjs';
+import { START_YEAR } from 'data/general';
 
 export const calculateYears = () => {
   const today = new Date();
