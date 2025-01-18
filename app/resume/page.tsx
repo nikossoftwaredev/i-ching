@@ -5,7 +5,7 @@ const Resume = () => {
         className="rounded-lg border-hidden "
         width="100%"
         height="100%"
-        src="/pdfs/resume-2.pdf"
+        src="/pdfs/resume-3.pdf"
       />
     </div>
   );
